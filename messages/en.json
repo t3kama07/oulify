@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "homeTitle": "Oulify | High-Converting Websites, Apps & Automation",
+    "homeDescription": "Oulify builds high-converting websites, apps, automation, and digital growth systems for businesses in Oulu, Finland and beyond.",
+    "aboutTitle": "About Oulify",
+    "aboutDescription": "Meet Oulify, an Oulu-based digital team building simple, effective websites, apps, and systems for real business growth.",
+    "careersTitle": "Careers | Oulify",
+    "careersDescription": "Explore careers at Oulify, an Oulu-based digital team building practical websites, apps, and automation for growing businesses.",
+    "projectsTitle": "Our Work | Oulify",
+    "projectsDescription": "Selected website, app, and digital system projects built by Oulify for real business growth.",
+    "contactTitle": "Contact Oulify",
+    "contactDescription": "Contact Oulify in Oulu, Finland to start your website, app, or automation project."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "careers": "Careers",
+    "projects": "Our Work",
+    "skills": "How We Work",
+    "contact": "Contact",
+    "requestCv": "Request a quote",
+    "languageSwitch": "Language switch"
+  },
+  "hero": {
+    "title": "We build digital solutions that drive real business growth",
+    "titlePrefix": "We build digital solutions that drive",
+    "titleHighlight": "real business growth",
+    "imageSrc": "/assets/heroimage.png",
+    "imageAlt": "Oulify website and app showcase across devices",
+    "imageWidth": 1024,
+    "imageHeight": 666,
+    "description": "High-converting websites, apps, and systems built to bring you more customers",
+    "trustLine": "Remote-first. International delivery. Clear process and fast communication.",
+    "viewWork": "Start your project",
+    "contactMe": "View our work"
+  },
+  "services": {
+    "title": "Core Services",
+    "aria": "Core services",
+    "cta": {
+      "label": "Discuss your project",
+      "href": "/en/#contact"
+    },
+    "groups": [
+      {
+        "title": "Websites",
+        "description": "High-converting websites designed to turn visitors into customers",
+        "items": [
+          "Business websites",
+          "Landing pages"
+        ]
+      },
+      {
+        "title": "Mobile Apps",
+        "description": "Custom mobile apps built for real users and business growth",
+        "items": [
+          "iOS & Android apps",
+          "MVP app development",
+          "App UI/UX design"
+        ]
+      },
+      {
+        "title": "Automation",
+        "description": "Smart systems that save time and reduce manual work",
+        "items": [
+          "Booking systems",
+          "Digital workflows"
+        ]
+      },
+      {
+        "title": "Growth & Marketing",
+        "description": "Strategies to attract, engage, and convert your audience",
+        "items": [
+          "Digital marketing",
+          "Social media ads",
+          "SEO & traffic growth"
+        ]
+      },
+      {
+        "title": "SaaS & Demo Videos",
+        "description": "Engaging videos that explain your product and drive action",
+        "items": [
+          "SaaS explainer videos",
+          "Product demo videos",
+          "Short marketing videos"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "title": "How We Work",
+    "subtitle": "A clear, collaborative path from idea to launch.",
+    "aria": "How we work process",
+    "cta": {
+      "label": "Start a conversation",
+      "href": "/en/#contact"
+    },
+    "items": [
+      {
+        "title": "Discover your goals",
+        "description": "We learn about your business, audience, and growth goals before we build anything."
+      },
+      {
+        "title": "Build the right solution",
+        "description": "We design and develop a website, app, or system tailored to your needs."
+      },
+      {
+        "title": "Refine with your feedback",
+        "description": "We iterate quickly, test carefully, and polish the details with you."
+      },
+      {
+        "title": "Launch and support growth",
+        "description": "We launch with confidence and help you improve as your business keeps growing."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Proof and Trust",
+    "subtitle": "Business owners choose us for clarity, speed, and reliability.",
+    "cta": {
+      "label": "Request a quote",
+      "href": "/en/#contact"
+    },
+    "quotes": [
+      {
+        "rating": 5,
+        "source": "Google Review",
+        "verified": "Verified Client",
+        "location": "Helsinki, Finland",
+        "text": "Communication was direct and clear. We always knew what was next.",
+        "author": "Operations Manager",
+        "company": "Regional Services Company"
+      },
+      {
+        "rating": 5,
+        "source": "Client Feedback",
+        "verified": "Verified Client",
+        "location": "Stockholm, Sweden",
+        "text": "The new website gave our business a stronger presence and better lead flow.",
+        "author": "Founder",
+        "company": "Local Construction Brand"
+      },
+      {
+        "rating": 5,
+        "source": "Clutch-style Review",
+        "verified": "Verified Client",
+        "location": "Berlin, Germany",
+        "text": "Delivery was fast and structured. The process was simple for our team.",
+        "author": "Managing Director",
+        "company": "International Service Business"
+      }
+    ],
+    "metrics": [
+      {
+        "value": "10+",
+        "label": "Projects delivered"
+      },
+      {
+        "value": "3",
+        "label": "Regions served"
+      },
+      {
+        "value": "<24h",
+        "label": "Response time"
+      }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why Choose Oulify",
+    "subtitle": "Clear reasons businesses trust us to deliver results.",
+    "aria": "Why choose us",
+    "cta": {
+      "label": "Book a call",
+      "href": "/en/#contact"
+    },
+    "items": [
+      {
+        "title": "Fast delivery (7-14 days)",
+        "description": "We move quickly without compromising quality, so you can start getting results sooner."
+      },
+      {
+        "title": "Clear pricing, no surprises",
+        "description": "Fixed scope and transparent pricing before we begin. What you see is what you pay."
+      },
+      {
+        "title": "Work directly with the developer",
+        "description": "No middle layers. Faster communication, better understanding, and quicker results."
+      },
+      {
+        "title": "Built for results, not just design",
+        "description": "Everything we create is focused on getting you more customers, not just looking good."
+      },
+      {
+        "title": "Focused on real business needs",
+        "description": "We build practical solutions that actually help small businesses and startups grow."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Straight answers about timelines, pricing, SEO, support, and how we work.",
+    "aria": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What services do you offer for digital solutions?",
+        "answer": "We provide complete digital solutions including website development, mobile app development, automation systems, digital marketing, and SaaS demo videos to help businesses grow online."
+      },
+      {
+        "question": "How long does it take to build a website or mobile app?",
+        "answer": "Most business websites and landing pages are completed within 7-14 days, while mobile apps and more complex systems may take longer depending on the features."
+      },
+      {
+        "question": "How much does website development cost?",
+        "answer": "The cost of website development depends on your requirements. We offer clear, fixed pricing with no hidden fees, so you know exactly what you are paying for."
+      },
+      {
+        "question": "Do you create SEO-friendly websites?",
+        "answer": "Yes. All our websites are built with SEO best practices, including fast loading speed, mobile responsiveness, and an optimized structure to help you rank better on Google."
+      },
+      {
+        "question": "Can you help my business get more customers online?",
+        "answer": "Yes. We design high-converting websites and digital marketing strategies that help attract visitors and turn them into customers."
+      },
+      {
+        "question": "Do you offer digital marketing services?",
+        "answer": "Yes. We provide digital marketing services including SEO, social media ads, and analytics setup to improve visibility and drive traffic."
+      },
+      {
+        "question": "Can you redesign or improve my existing website?",
+        "answer": "Yes. We can redesign your current website to improve user experience, speed, SEO performance, and conversion rate."
+      },
+      {
+        "question": "Do you provide support after the project is completed?",
+        "answer": "Yes. We offer ongoing support and updates to help your website or app continue performing well after launch."
+      },
+      {
+        "question": "Do you work with international clients?",
+        "answer": "Yes. We work remotely with clients across Finland, Europe, and worldwide."
+      },
+      {
+        "question": "How do I get started with your services?",
+        "answer": "Click \"Start your project\" or send a message through the contact form. We usually reply within 24 hours."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Our Work",
+    "subtitle": "Visual case examples with business outcomes",
+    "cta": {
+      "label": "Talk about your project",
+      "href": "/en/#contact"
+    },
+    "liveDemo": "",
+    "github": "",
+    "items": [
+      {
+        "id": "dashboard-analytics",
+        "title": "MREngineering",
+        "stack": "Construction business website",
+        "description": "Improved service clarity and increased inbound client inquiries.",
+        "workImageSrc": "/assets/work1.webp",
+        "thumbnailSrc": "/assets/mreng.png",
+        "thumbnailAlt": "MREngineering website preview",
+        "thumbnailPosition": "top center"
+      },
+      {
+        "id": "ecommerce-platform",
+        "title": "TassuKaveri",
+        "stack": "Service marketplace platform",
+        "description": "Built trust with users and improved repeat engagement.",
+        "workImageSrc": "/assets/work2.webp",
+        "thumbnailSrc": "/assets/tassu.png",
+        "thumbnailAlt": "TassuKaveri service platform preview",
+        "thumbnailPosition": "top center"
+      },
+      {
+        "id": "kielibuddy",
+        "title": "KieliBuddy",
+        "stack": "Digital community product",
+        "description": "Increased user interaction with a simpler product experience.",
+        "workImageSrc": "/assets/work3.webp",
+        "thumbnailSrc": "/assets/kielibuddy_thumbnail.png",
+        "thumbnailAlt": "KieliBuddy product preview"
+      }
+    ]
+  },
+  "aboutPage": {
+    "title": "About Oulify",
+    "intro": "We are a small digital team focused on building simple, effective solutions for real business problems.",
+    "whyStarted": {
+      "title": "Why we started",
+      "paragraphs": [
+        "Oulify was created with a simple idea: most businesses do not need complex systems, they need solutions that actually work.",
+        "We saw too many websites and apps that looked good but did not bring real results, so we decided to build digital products that are clear, practical, and made for real use."
+      ]
+    },
+    "howWeWork": {
+      "title": "How we work",
+      "paragraphs": [
+        "We keep things simple and direct.",
+        "You work closely with the person building your project. We focus on clear communication, fast execution, and making sure everything delivers real value.",
+        "No unnecessary complexity, just a smooth and focused process from start to finish."
+      ]
+    },
+    "whatWeCareAbout": {
+      "title": "What we care about",
+      "items": [
+        "Building solutions that are useful in real situations",
+        "Delivering work on time",
+        "Keeping everything clear and transparent",
+        "Making sure your investment brings real value"
+      ]
+    },
+    "whatDrivesUs": {
+      "title": "What drives us",
+      "mission": {
+        "label": "Our mission",
+        "description": "To build simple, effective digital solutions that help businesses grow without unnecessary complexity."
+      },
+      "vision": {
+        "label": "Our vision",
+        "description": "To make high-quality digital products accessible to businesses of all sizes."
+      }
+    },
+    "whereWeWork": {
+      "title": "Where we work",
+      "paragraphs": [
+        "We work remotely with clients across different cities and countries, keeping communication simple and efficient."
+      ]
+    }
+  },
+  "careersPage": {
+    "title": "Careers at Oulify",
+    "messageBefore": "If you're excited about what we're building but don't see a perfect role, drop us a line at ",
+    "email": "careers@oulify.com",
+    "messageAfter": ". We love hearing from curious builders."
+  },
+  "contactSection": {
+    "title": "Tell us what you want to build",
+    "description": "Share your business goal and we usually reply within 24 hours.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "business": "Subject",
+      "message": "Message",
+      "send": "Send inquiry"
+    }
+  },
+  "footer": {
+    "name": "Oulify",
+    "role": "",
+    "location": "Oulu, Finland",
+    "serviceArea": "Web and digital solutions for business owners",
+    "companyHeading": "Company",
+    "getStartedHeading": "Get Started",
+    "home": "Home",
+    "services": "Services",
+    "quickLinks": "Quick Links",
+    "about": "About",
+    "careers": "Careers",
+    "projects": "Our Work",
+    "howWeWork": "How We Work",
+    "contact": "Contact",
+    "contactHeading": "Business Contact",
+    "requestCv": "Request a quote",
+    "builtWith": "Built with Next.js",
+    "linkedin": "LinkedIn",
+    "linkedinUrl": "https://www.linkedin.com/company/oulify"
+  }
+}
