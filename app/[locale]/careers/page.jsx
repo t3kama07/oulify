@@ -74,7 +74,7 @@ export default async function LocalizedCareersPage({ params }) {
   };
 
   return (
-    <main className="portfolio-page" id="top">
+    <main className="portfolio-page portfolio-page-short" id="top">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

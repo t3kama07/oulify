@@ -34,6 +34,19 @@ a {
   padding-bottom: 0;
 }
 
+.portfolio-page-short {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-page-short .about-page {
+  flex: 1;
+}
+
+.portfolio-page-short .contact-footer {
+  margin-top: auto;
+}
+
 .shell {
   width: min(1480px, calc(100% - 64px));
   margin: 0 auto;
