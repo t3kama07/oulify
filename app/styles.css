@@ -383,7 +383,7 @@ a {
 
 .hero-visual img {
   display: block;
-  width: 65%;
+  width: 84%;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -1347,14 +1347,7 @@ a {
   }
 
   .hero-visual {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    justify-self: center;
-  }
-
-  .hero-visual img {
-    width: 68%;
+    display: none;
   }
 
   .hero-description {
