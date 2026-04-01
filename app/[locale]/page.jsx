@@ -7,7 +7,9 @@ import ProjectsSection from "../components/ProjectsSection";
 import ServicesSection from "../components/ServicesSection";
 import TrustSection from "../components/TrustSection";
 import WhyChooseSection from "../components/WhyChooseSection";
+import { getHeroImageSrc } from "@/lib/hero-image";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
+import { getLogoSrc } from "@/lib/logo";
 import { getSiteUrl, toAbsoluteUrl } from "@/lib/site";
 import { notFound } from "next/navigation";
 
@@ -19,6 +21,7 @@ export async function generateMetadata({ params }) {
   }
 
   const dict = getDictionary(locale);
+  const heroImageSrc = getHeroImageSrc(dict.hero.imageSrc || "/assets/heroimage.png");
 
   return {
     title: dict.meta.homeTitle,
@@ -37,7 +40,7 @@ export async function generateMetadata({ params }) {
       description: dict.meta.homeDescription,
       images: [
         {
-          url: "/assets/heroimage.png",
+          url: heroImageSrc,
           width: 1024,
           height: 666,
           alt: dict.hero.imageAlt,
@@ -48,7 +51,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: dict.meta.homeTitle,
       description: dict.meta.homeDescription,
-      images: ["/assets/heroimage.png"],
+      images: [heroImageSrc],
     },
   };
 }
@@ -62,6 +65,7 @@ export default async function LocalizedHomePage({ params }) {
 
   const dict = getDictionary(locale);
   const siteUrl = getSiteUrl();
+  const brandLogoSrc = getLogoSrc("/assets/logo.png");
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -69,7 +73,7 @@ export default async function LocalizedHomePage({ params }) {
     url: siteUrl,
     email: "hello@oulify.com",
     description: dict.meta.homeDescription,
-    logo: toAbsoluteUrl("/favicon.ico"),
+    logo: toAbsoluteUrl(brandLogoSrc),
     contactPoint: {
       "@type": "ContactPoint",
       email: "hello@oulify.com",
@@ -85,7 +89,7 @@ export default async function LocalizedHomePage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <Navbar locale={locale} nav={dict.nav} currentPath="/" />
+      <Navbar locale={locale} nav={dict.nav} currentPath="/" brandLogoSrc={brandLogoSrc} />
       <HeroSection
         locale={locale}
         hero={dict.hero}

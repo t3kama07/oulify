@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles.css";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { getHeroImageSrc } from "@/lib/hero-image";
 import { getSiteUrl } from "@/lib/site";
 
 const geistSans = Geist({
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = getSiteUrl();
+const heroImageSrc = getHeroImageSrc("/assets/heroimage.png");
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -35,7 +37,7 @@ export const metadata = {
       "Oulify builds high-converting websites, apps, automation, and digital growth systems for businesses in Oulu, Finland and beyond.",
     images: [
       {
-        url: "/assets/heroimage.png",
+        url: heroImageSrc,
         width: 1024,
         height: 666,
         alt: "Oulify digital products across devices",
@@ -47,7 +49,7 @@ export const metadata = {
     title: "Oulify | High-Converting Websites, Apps & Automation",
     description:
       "Oulify builds high-converting websites, apps, automation, and digital growth systems for businesses in Oulu, Finland and beyond.",
-    images: ["/assets/heroimage.png"],
+    images: [heroImageSrc],
   },
   robots: {
     index: true,

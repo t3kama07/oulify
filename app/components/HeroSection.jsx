@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { getHeroImageSrc } from "@/lib/hero-image";
 
 export default function HeroSection({ locale, hero, primaryCta, secondaryCta }) {
-  const heroImageSrc = hero.imageSrc || "/assets/mreng.png";
+  const heroImageSrc = getHeroImageSrc(hero.imageSrc || "/assets/heroimage.png");
   const heroImageAlt = hero.imageAlt || "Website showcase";
   const heroImageWidth = hero.imageWidth || 1024;
   const heroImageHeight = hero.imageHeight || 666;

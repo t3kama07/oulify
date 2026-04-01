@@ -1,15 +1,57 @@
+import Image from "next/image";
+import { getLogoSrc } from "@/lib/logo";
+
 export default function Footer({ locale, footer }) {
   const year = new Date().getFullYear();
-  const hasLegalLinks = footer.privacyUrl || footer.termsUrl;
+  const brandLogoSrc = getLogoSrc("/assets/logo.png");
+  const legalLinks = [
+    {
+      href: `/${locale}/privacy-policy`,
+      label: footer.privacyLabel,
+    },
+    {
+      href: `/${locale}/terms-and-conditions`,
+      label: footer.termsLabel,
+    },
+    {
+      href: `/${locale}/refund-policy`,
+      label: footer.refundLabel,
+    },
+  ].filter((link) => link.label);
+  const hasLegalLinks = legalLinks.length > 0;
 
   return (
     <div className="footer-panel">
       <div className="footer-grid">
         <div className="footer-col">
-          <h3>{footer.name}</h3>
+          <h3 className="footer-brand">
+            <Image
+              className="footer-brand-logo"
+              src={brandLogoSrc}
+              alt={footer.name}
+              width={180}
+              height={42}
+            />
+          </h3>
           {footer.role ? <p>{footer.role}</p> : null}
           {footer.serviceArea ? <p>{footer.serviceArea}</p> : null}
           <p className="footer-copyright">&copy; {year} {footer.name}. All rights reserved.</p>
+          {footer.facebookUrl ? (
+            <div className="footer-socials" aria-label="Social media">
+              <a
+                className="footer-social-link"
+                href={footer.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={footer.facebook}
+                title={footer.facebook}
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M13.5 21v-7h2.35l.35-2.75H13.5V9.5c0-.8.22-1.35 1.37-1.35H16.3V5.7c-.25-.03-1.1-.1-2.1-.1-2.07 0-3.5 1.26-3.5 3.58v2.02H8.35V14h2.35v7h2.8Z" />
+                </svg>
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className="footer-col">
@@ -27,26 +69,30 @@ export default function Footer({ locale, footer }) {
           <a href={`/${locale}/#contact`}>{footer.requestCv}</a>
         </div>
 
-        <div className="footer-col">
+        <div className="footer-col footer-col-contact">
           <h4>{footer.contactHeading}</h4>
-          <a href="mailto:hello@oulify.com">hello@oulify.com</a>
-          <p>{footer.location}</p>
-          {footer.linkedinUrl ? (
-            <a href={footer.linkedinUrl} target="_blank" rel="noopener noreferrer">
-              {footer.linkedin}
-            </a>
-          ) : null}
-        </div>
-      </div>
-
-      {hasLegalLinks ? (
-        <div className="footer-meta">
-          <div className="footer-legal">
-            {footer.privacyUrl ? <a href={footer.privacyUrl}>{footer.privacyLabel || "Privacy Policy"}</a> : null}
-            {footer.termsUrl ? <a href={footer.termsUrl}>{footer.termsLabel || "Terms of Service"}</a> : null}
+          <div className="footer-contact-content">
+            <div className="footer-contact-links">
+              <a href="mailto:hello@oulify.com">hello@oulify.com</a>
+              <p>{footer.location}</p>
+              {footer.linkedinUrl ? (
+                <a href={footer.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                  {footer.linkedin}
+                </a>
+              ) : null}
+            </div>
+            {hasLegalLinks ? (
+              <div className="footer-legal footer-contact-legal">
+                {legalLinks.map((link) => (
+                  <a key={link.href} href={link.href}>
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
           </div>
         </div>
-      ) : null}
+      </div>
     </div>
   );
 }

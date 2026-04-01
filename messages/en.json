@@ -364,8 +364,13 @@
     "contact": "Contact",
     "contactHeading": "Business Contact",
     "requestCv": "Request a quote",
+    "privacyLabel": "Privacy Policy",
+    "termsLabel": "Terms and Conditions",
+    "refundLabel": "Refund Policy",
     "builtWith": "Built with Next.js",
+    "facebook": "Facebook",
+    "facebookUrl": "https://www.facebook.com/oulify",
     "linkedin": "LinkedIn",
-    "linkedinUrl": "https://www.linkedin.com/company/oulify"
+    "linkedinUrl": ""
   }
 }

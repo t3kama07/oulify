@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
-export default function Navbar({ locale, nav, currentPath = "/" }) {
+export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = "/assets/logo.png" }) {
   const [open, setOpen] = useState(false);
   const enPath = `/en${currentPath === "/" ? "" : currentPath}`;
   const fiPath = `/fi${currentPath === "/" ? "" : currentPath}`;
@@ -20,8 +21,15 @@ export default function Navbar({ locale, nav, currentPath = "/" }) {
   return (
     <header className="navbar">
       <div className="nav-content">
-        <a className="nav-brand" href={`/${locale}`} onClick={close}>
-          OULIFY
+        <a className="nav-brand" href={`/${locale}`} onClick={close} aria-label="Oulify home">
+          <Image
+            className="nav-brand-logo"
+            src={brandLogoSrc}
+            alt="Oulify"
+            width={224}
+            height={53}
+            priority
+          />
         </a>
         <nav className="nav-links" aria-label="Primary">
           <a href={homeHref} aria-current={isHomePage ? "page" : undefined}>{nav.home}</a>

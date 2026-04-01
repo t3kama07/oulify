@@ -364,8 +364,13 @@
     "contact": "Yhteys",
     "contactHeading": "Yritysyhteys",
     "requestCv": "Pyyda tarjous",
+    "privacyLabel": "Tietosuojaseloste",
+    "termsLabel": "Kayttoehdot",
+    "refundLabel": "Palautuskaytanto",
     "builtWith": "Rakennettu Next.js:lla",
+    "facebook": "Facebook",
+    "facebookUrl": "https://www.facebook.com/oulify",
     "linkedin": "LinkedIn",
-    "linkedinUrl": "https://www.linkedin.com/company/oulify"
+    "linkedinUrl": ""
   }
 }

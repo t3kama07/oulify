@@ -1,7 +1,9 @@
 import AboutSection from "../../components/AboutSection";
 import ContactSection from "../../components/ContactSection";
 import Navbar from "../../components/Navbar";
+import { getHeroImageSrc } from "@/lib/hero-image";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
+import { getLogoSrc } from "@/lib/logo";
 import { getSiteUrl, toAbsoluteUrl } from "@/lib/site";
 import { notFound } from "next/navigation";
 
@@ -13,6 +15,7 @@ export async function generateMetadata({ params }) {
   }
 
   const dict = getDictionary(locale);
+  const heroImageSrc = getHeroImageSrc(dict.hero.imageSrc || "/assets/heroimage.png");
 
   return {
     title: dict.meta.aboutTitle,
@@ -31,7 +34,7 @@ export async function generateMetadata({ params }) {
       description: dict.meta.aboutDescription,
       images: [
         {
-          url: "/assets/heroimage.png",
+          url: heroImageSrc,
           width: 1024,
           height: 666,
           alt: dict.hero.imageAlt,
@@ -42,7 +45,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: dict.meta.aboutTitle,
       description: dict.meta.aboutDescription,
-      images: ["/assets/heroimage.png"],
+      images: [heroImageSrc],
     },
   };
 }
@@ -56,6 +59,7 @@ export default async function LocalizedAboutPage({ params }) {
 
   const dict = getDictionary(locale);
   const siteUrl = getSiteUrl();
+  const brandLogoSrc = getLogoSrc("/assets/logo.png");
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -63,7 +67,7 @@ export default async function LocalizedAboutPage({ params }) {
     url: siteUrl,
     email: "hello@oulify.com",
     description: dict.meta.aboutDescription,
-    logo: toAbsoluteUrl("/favicon.ico"),
+    logo: toAbsoluteUrl(brandLogoSrc),
     contactPoint: {
       "@type": "ContactPoint",
       email: "hello@oulify.com",
@@ -79,7 +83,7 @@ export default async function LocalizedAboutPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <Navbar locale={locale} nav={dict.nav} currentPath="/about" />
+      <Navbar locale={locale} nav={dict.nav} currentPath="/about" brandLogoSrc={brandLogoSrc} />
       <AboutSection about={dict.aboutPage} />
       <ContactSection locale={locale} contactSection={dict.contactSection} footer={dict.footer} />
     </main>

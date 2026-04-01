@@ -23,6 +23,24 @@ export default function sitemap() {
       priority: 0.6,
     },
     {
+      url: toAbsoluteUrl("/en/privacy-policy"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: toAbsoluteUrl("/en/terms-and-conditions"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: toAbsoluteUrl("/en/refund-policy"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: toAbsoluteUrl("/fi"),
       lastModified,
       changeFrequency: "weekly",
@@ -39,6 +57,24 @@ export default function sitemap() {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.5,
+    },
+    {
+      url: toAbsoluteUrl("/fi/privacy-policy"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: toAbsoluteUrl("/fi/terms-and-conditions"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: toAbsoluteUrl("/fi/refund-policy"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 }
