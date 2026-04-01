@@ -1,6 +1,6 @@
-import AboutSection from "../../components/AboutSection";
-import ContactSection from "../../components/ContactSection";
-import Navbar from "../../components/Navbar";
+import CareersSection from "@/app/components/CareersSection";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 import { getHeroImageSrc } from "@/lib/hero-image";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
 import { getLogoSrc } from "@/lib/logo";
@@ -18,20 +18,20 @@ export async function generateMetadata({ params }) {
   const heroImageSrc = getHeroImageSrc(dict.hero.imageSrc || "/assets/heroimage.png");
 
   return {
-    title: dict.meta.aboutTitle,
-    description: dict.meta.aboutDescription,
+    title: dict.meta.careersTitle,
+    description: dict.meta.careersDescription,
     alternates: {
-      canonical: `/${locale}/about`,
+      canonical: `/${locale}/careers`,
       languages: {
-        en: "/en/about",
-        fi: "/fi/about",
-        "x-default": "/en/about",
+        en: "/en/careers",
+        fi: "/fi/careers",
+        "x-default": "/en/careers",
       },
     },
     openGraph: {
-      url: `/${locale}/about`,
-      title: dict.meta.aboutTitle,
-      description: dict.meta.aboutDescription,
+      url: `/${locale}/careers`,
+      title: dict.meta.careersTitle,
+      description: dict.meta.careersDescription,
       images: [
         {
           url: heroImageSrc,
@@ -43,14 +43,14 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: dict.meta.aboutTitle,
-      description: dict.meta.aboutDescription,
+      title: dict.meta.careersTitle,
+      description: dict.meta.careersDescription,
       images: [heroImageSrc],
     },
   };
 }
 
-export default async function LocalizedAboutPage({ params }) {
+export default async function LocalizedCareersPage({ params }) {
   const { locale } = await params;
 
   if (!isValidLocale(locale)) {
@@ -60,32 +60,37 @@ export default async function LocalizedAboutPage({ params }) {
   const dict = getDictionary(locale);
   const siteUrl = getSiteUrl();
   const brandLogoSrc = getLogoSrc("/assets/logo.png");
+  const sameAs = [dict.footer.facebookUrl, dict.footer.linkedinUrl].filter(Boolean);
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Oulify",
     url: siteUrl,
     email: "hello@oulify.com",
-    description: dict.meta.aboutDescription,
+    description: dict.meta.careersDescription,
     logo: toAbsoluteUrl(brandLogoSrc),
     contactPoint: {
       "@type": "ContactPoint",
       email: "hello@oulify.com",
-      contactType: "sales",
+      contactType: "recruiting",
       availableLanguage: ["en", "fi"],
     },
-    sameAs: dict.footer.linkedinUrl ? [dict.footer.linkedinUrl] : undefined,
+    sameAs: sameAs.length ? sameAs : undefined,
   };
 
   return (
-    <main className="portfolio-page" id="top">
+    <main className="portfolio-page portfolio-page-short" id="top">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <Navbar locale={locale} nav={dict.nav} currentPath="/about" brandLogoSrc={brandLogoSrc} />
-      <AboutSection about={dict.aboutPage} />
-      <ContactSection locale={locale} contactSection={dict.contactSection} footer={dict.footer} />
+      <Navbar locale={locale} nav={dict.nav} currentPath="/careers" brandLogoSrc={brandLogoSrc} />
+      <CareersSection careers={dict.careersPage} />
+      <footer className="contact-footer">
+        <div className="footer-shell">
+          <Footer locale={locale} footer={dict.footer} />
+        </div>
+      </footer>
     </main>
   );
 }

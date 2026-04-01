@@ -1,6 +1,6 @@
-import Footer from "../../components/Footer";
-import LegalPageSection from "../../components/LegalPageSection";
-import Navbar from "../../components/Navbar";
+import Footer from "@/app/components/Footer";
+import LegalPageSection from "@/app/components/LegalPageSection";
+import Navbar from "@/app/components/Navbar";
 import { buildLegalMetadata, getLegalPage } from "@/lib/legal-pages";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
 import { getLogoSrc } from "@/lib/logo";

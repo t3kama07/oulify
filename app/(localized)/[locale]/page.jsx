@@ -1,12 +1,12 @@
-import FAQSection from "../components/FAQSection";
-import ContactSection from "../components/ContactSection";
-import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
-import ProcessSection from "../components/ProcessSection";
-import ProjectsSection from "../components/ProjectsSection";
-import ServicesSection from "../components/ServicesSection";
-import TrustSection from "../components/TrustSection";
-import WhyChooseSection from "../components/WhyChooseSection";
+import ContactSection from "@/app/components/ContactSection";
+import FAQSection from "@/app/components/FAQSection";
+import HeroSection from "@/app/components/HeroSection";
+import Navbar from "@/app/components/Navbar";
+import ProcessSection from "@/app/components/ProcessSection";
+import ProjectsSection from "@/app/components/ProjectsSection";
+import ServicesSection from "@/app/components/ServicesSection";
+import TrustSection from "@/app/components/TrustSection";
+import WhyChooseSection from "@/app/components/WhyChooseSection";
 import { getHeroImageSrc } from "@/lib/hero-image";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
 import { getLogoSrc } from "@/lib/logo";
@@ -66,6 +66,7 @@ export default async function LocalizedHomePage({ params }) {
   const dict = getDictionary(locale);
   const siteUrl = getSiteUrl();
   const brandLogoSrc = getLogoSrc("/assets/logo.png");
+  const sameAs = [dict.footer.facebookUrl, dict.footer.linkedinUrl].filter(Boolean);
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -80,7 +81,7 @@ export default async function LocalizedHomePage({ params }) {
       contactType: "sales",
       availableLanguage: ["en", "fi"],
     },
-    sameAs: dict.footer.linkedinUrl ? [dict.footer.linkedinUrl] : undefined,
+    sameAs: sameAs.length ? sameAs : undefined,
   };
 
   return (

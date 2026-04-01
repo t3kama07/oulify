@@ -5,10 +5,29 @@ import { useState } from "react";
 
 export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = "/assets/logo.png" }) {
   const [open, setOpen] = useState(false);
+  const labels =
+    locale === "fi"
+      ? {
+          home: "Oulifyn etusivu",
+          primary: "Päänavigaatio",
+          openMenu: "Avaa valikko",
+          closeMenu: "Sulje valikko",
+          mobileMenu: "Navigointivalikko",
+          mobilePrimary: "Mobiilin päänavigaatio",
+        }
+      : {
+          home: "Oulify home",
+          primary: "Primary",
+          openMenu: "Open menu",
+          closeMenu: "Close menu",
+          mobileMenu: "Navigation menu",
+          mobilePrimary: "Mobile primary",
+        };
   const enPath = `/en${currentPath === "/" ? "" : currentPath}`;
   const fiPath = `/fi${currentPath === "/" ? "" : currentPath}`;
   const isAboutPage = currentPath === "/about";
   const isCareersPage = currentPath === "/careers";
+  const isServicesPage = currentPath === "/services" || currentPath.startsWith("/services/");
   const isHomePage = currentPath === "/";
   const homeHref = `/${locale}/#top`;
   const servicesHref = `/${locale}/#services`;
@@ -21,7 +40,7 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
   return (
     <header className="navbar">
       <div className="nav-content">
-        <a className="nav-brand" href={`/${locale}`} onClick={close} aria-label="Oulify home">
+        <a className="nav-brand" href={`/${locale}`} onClick={close} aria-label={labels.home}>
           <Image
             className="nav-brand-logo"
             src={brandLogoSrc}
@@ -31,9 +50,9 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
             priority
           />
         </a>
-        <nav className="nav-links" aria-label="Primary">
+        <nav className="nav-links" aria-label={labels.primary}>
           <a href={homeHref} aria-current={isHomePage ? "page" : undefined}>{nav.home}</a>
-          <a href={servicesHref}>{nav.services}</a>
+          <a href={servicesHref} aria-current={isServicesPage ? "page" : undefined}>{nav.services}</a>
           <a href={aboutHref} aria-current={isAboutPage ? "page" : undefined}>{nav.about}</a>
           <a href={projectsHref}>{nav.projects}</a>
           <a href={careersHref} aria-current={isCareersPage ? "page" : undefined}>{nav.careers}</a>
@@ -52,7 +71,7 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
         </a>
         <button
           className={`nav-hamburger${open ? " is-open" : ""}`}
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? labels.closeMenu : labels.openMenu}
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((o) => !o)}
@@ -64,8 +83,8 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
       </div>
 
       {open && (
-        <div className="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
-          <nav className="mobile-nav" aria-label="Mobile primary">
+        <div className="mobile-menu" id="mobile-menu" role="dialog" aria-label={labels.mobileMenu}>
+          <nav className="mobile-nav" aria-label={labels.mobilePrimary}>
             <a href={homeHref} onClick={close}>{nav.home}</a>
             <a href={servicesHref} onClick={close}>{nav.services}</a>
             <a href={aboutHref} onClick={close}>{nav.about}</a>

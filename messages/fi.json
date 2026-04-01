@@ -1,59 +1,66 @@
 {
   "meta": {
-    "homeTitle": "Oulify | Korkeasti konvertoivat verkkosivut, sovellukset ja automaatio",
-    "homeDescription": "Oulify rakentaa korkeasti konvertoivia verkkosivuja, sovelluksia, automaatiota ja digitaalisia kasvujarjestelmia Oulusta kasin yrityksille Suomessa ja kansainvalisesti.",
+    "homeTitle": "Oulify | Korkean konversion verkkosivut, sovellukset ja automaatio",
+    "homeDescription": "Oulify rakentaa korkean konversion verkkosivuja, sovelluksia, automaatioita ja digitaalisia kasvujärjestelmiä yrityksille Suomessa ja kansainvälisesti.",
     "aboutTitle": "Tietoa Oulifysta",
-    "aboutDescription": "Tutustu Oulifyyn, Oulussa toimivaan digitaaliseen tiimiin, joka rakentaa selkeita ja tehokkaita verkkosivuja, sovelluksia ja jarjestelmia todelliseen kasvuun.",
-    "careersTitle": "Tyopaikat | Oulify",
-    "careersDescription": "Tutustu uramahdollisuuksiin Oulussa toimivalla Oulifylla, jossa rakennetaan kaytannollisia verkkosivuja, sovelluksia ja automaatiota kasvaville yrityksille.",
-    "projectsTitle": "Tyomme | Oulify",
-    "projectsDescription": "Valikoituja verkkosivu-, sovellus- ja digijarjestelmaprojekteja, jotka Oulify on rakentanut todelliseen liiketoiminnan kasvuun.",
-    "contactTitle": "Yhteys Oulifyyn",
-    "contactDescription": "Ota yhteytta Oulifyyn Oulussa ja aloita verkkosivu-, sovellus- tai automaatioprojektisi."
+    "aboutDescription": "Tutustu Oulifyyn, digitaaliseen tiimiin, joka rakentaa selkeitä ja tehokkaita verkkosivuja, sovelluksia ja järjestelmiä todelliseen liiketoiminnan kasvuun.",
+    "careersTitle": "Työpaikat | Oulify",
+    "careersDescription": "Tutustu uramahdollisuuksiin Oulifylla, jossa rakennetaan käytännöllisiä verkkosivuja, sovelluksia ja automaatioita kasvaville yrityksille.",
+    "servicesTitle": "Palvelut | Oulify",
+    "servicesDescription": "Tutustu Oulifyn palveluihin verkkosivujen, mobiilisovellusten, automaation, kasvumarkkinoinnin ja tuote-esittelysisältöjen parissa.",
+    "projectsTitle": "Työmme | Oulify",
+    "projectsDescription": "Valikoituja verkkosivu-, sovellus- ja digijärjestelmäprojekteja, joita Oulify on toteuttanut liiketoiminnan kasvun tueksi.",
+    "contactTitle": "Ota yhteyttä Oulifyyn",
+    "contactDescription": "Ota yhteyttä Oulifyyn ja aloita verkkosivu-, sovellus- tai automaatioprojektisi."
   },
   "nav": {
     "home": "Etusivu",
     "services": "Palvelut",
-    "about": "Tietoa meista",
-    "careers": "Tyopaikat",
-    "projects": "Tyomme",
+    "about": "Tietoa meistä",
+    "careers": "Työpaikat",
+    "projects": "Työmme",
     "skills": "Toimintatapamme",
     "contact": "Yhteys",
-    "requestCv": "Pyyda tarjous",
-    "languageSwitch": "Kielenvaihto"
+    "requestCv": "Pyydä tarjous",
+    "languageSwitch": "Kielen vaihto"
   },
   "hero": {
-    "title": "Rakennamme yrityssivustoja, jotka muuttavat selkeyden kasvuksi.",
-    "titlePrefix": "Rakennamme yrityssivustoja, jotka muuttavat",
-    "titleHighlight": "selkeyden kasvuksi.",
+    "title": "Rakennamme digitaalisia ratkaisuja, jotka tuovat todellista liiketoiminnan kasvua",
+    "titlePrefix": "Rakennamme digitaalisia ratkaisuja, jotka tuovat",
+    "titleHighlight": "todellista liiketoiminnan kasvua",
     "imageSrc": "/assets/heroimage.png",
     "imageAlt": "Oulifyn verkkosivu- ja sovellusesittely eri laitteilla",
     "imageWidth": 1024,
     "imageHeight": 666,
-    "description": "Korkeasti konvertoivat verkkosivut, sovellukset ja jarjestelmat, jotka tuovat sinulle enemman asiakkaita.",
-    "trustLine": "Etatyona toteutus. Kansainvalinen palvelu. Selkea prosessi ja nopea viestinta.",
-    "viewWork": "Varaa maksuton konsultaatio",
-    "contactMe": "Katso tyomme"
+    "description": "Korkean konversion verkkosivut, sovellukset ja järjestelmät, jotka auttavat sinua saamaan enemmän asiakkaita",
+    "trustLine": "Etänä toteutettu. Kansainvälinen toimitus. Selkeä prosessi ja nopea viestintä.",
+    "viewWork": "Aloita projektisi",
+    "contactMe": "Katso työmme"
   },
   "services": {
     "title": "Ydinpalvelut",
     "aria": "Ydinpalvelut",
+    "pageIntro": "Tutustu Oulifyn keskeisiin palvelualueisiin ja siihen, millaisia digitaalisia ratkaisuja rakennamme kasvaville yrityksille.",
     "cta": {
       "label": "Keskustele projektista",
       "href": "/fi/#contact"
     },
     "groups": [
       {
+        "id": "websites",
+        "slug": "websites",
         "title": "Verkkosivut",
-        "description": "Korkeasti konvertoivat verkkosivut, jotka muuttavat kayvijat asiakkaiksi",
+        "description": "Korkean konversion verkkosivut, jotka muuttavat kävijät asiakkaiksi",
         "items": [
           "Yrityssivustot",
           "Laskeutumissivut"
         ]
       },
       {
+        "id": "mobile-apps",
+        "slug": "mobile-apps",
         "title": "Mobiilisovellukset",
-        "description": "Raataloidyt mobiilisovellukset oikeille kayttajille ja liiketoiminnan kasvuun",
+        "description": "Räätälöidyt mobiilisovellukset oikeille käyttäjille ja liiketoiminnan kasvuun",
         "items": [
           "iOS- ja Android-sovellukset",
           "MVP-sovelluskehitys",
@@ -61,16 +68,20 @@
         ]
       },
       {
+        "id": "automation",
+        "slug": "automation",
         "title": "Automaatio",
-        "description": "Alykkaita jarjestelmia, jotka saastavat aikaa ja vahentavat manuaalista tyota",
+        "description": "Älykkäitä järjestelmiä, jotka säästävät aikaa ja vähentävät manuaalista työtä",
         "items": [
-          "Varausjarjestelmat",
-          "Digitaaliset tyonkulut"
+          "Varausjärjestelmät",
+          "Digitaaliset työnkulut"
         ]
       },
       {
+        "id": "growth-marketing",
+        "slug": "growth-marketing",
         "title": "Kasvu ja markkinointi",
-        "description": "Strategioita yleison houkuttelemiseen, sitouttamiseen ja konvertointiin",
+        "description": "Strategioita yleisön tavoittamiseen, sitouttamiseen ja konvertointiin",
         "items": [
           "Digimarkkinointi",
           "Sosiaalisen median mainonta",
@@ -78,8 +89,10 @@
         ]
       },
       {
+        "id": "saas-demo-videos",
+        "slug": "saas-demo-videos",
         "title": "SaaS- ja demovideot",
-        "description": "Vaikuttavia videoita, jotka selittavat tuotteesi ja ohjaavat toimintaan",
+        "description": "Vaikuttavia videoita, jotka selittävät tuotteesi ja ohjaavat toimintaan",
         "items": [
           "SaaS-selitysvideot",
           "Tuotedemovideot",
@@ -90,7 +103,7 @@
   },
   "process": {
     "title": "Toimintatapamme",
-    "subtitle": "Selkea ja yhteistyoon perustuva polku ideasta julkaisuun.",
+    "subtitle": "Selkeä ja yhteistyöhön perustuva polku ideasta julkaisuun.",
     "aria": "Toimintatapamme prosessi",
     "cta": {
       "label": "Aloita keskustelu",
@@ -99,27 +112,27 @@
     "items": [
       {
         "title": "Kartoitamme tavoitteesi",
-        "description": "Perehdymme liiketoimintaasi, kohdeyleisoon ja kasvutavoitteisiin ennen toteutusta."
+        "description": "Perehdymme liiketoimintaasi, kohdeyleisöösi ja kasvutavoitteisiisi ennen toteutusta."
       },
       {
         "title": "Rakennamme oikean ratkaisun",
-        "description": "Suunnittelemme ja toteutamme verkkosivun, sovelluksen tai jarjestelman tarpeidesi mukaan."
+        "description": "Suunnittelemme ja toteutamme verkkosivun, sovelluksen tai järjestelmän tarpeidesi mukaan."
       },
       {
-        "title": "Hiomme palautteesi pohjalta",
+        "title": "Hiomme ratkaisun palautteesi pohjalta",
         "description": "Iteroimme nopeasti, testaamme huolellisesti ja viimeistelemme yksityiskohdat kanssasi."
       },
       {
         "title": "Julkaisemme ja tuemme kasvua",
-        "description": "Julkaisemme varmoin askelin ja autamme kehittamaan ratkaisua liiketoimintasi kasvaessa."
+        "description": "Julkaisemme varmoin askelin ja autamme kehittämään ratkaisua liiketoimintasi kasvaessa."
       }
     ]
   },
   "trust": {
-    "title": "Luottamus ja naytot",
-    "subtitle": "Yritykset valitsevat meidat selkeyden, nopeuden ja luotettavuuden vuoksi.",
+    "title": "Näyttöä ja luottamusta",
+    "subtitle": "Yritykset valitsevat meidät selkeyden, nopeuden ja luotettavuuden vuoksi.",
     "cta": {
-      "label": "Pyyda tarjous",
+      "label": "Pyydä tarjous",
       "href": "/fi/#contact"
     },
     "quotes": [
@@ -128,7 +141,7 @@
         "source": "Google-arvio",
         "verified": "Vahvistettu asiakas",
         "location": "Helsinki, Suomi",
-        "text": "Viestinta oli suoraa ja selkeaa. Tiesimme koko ajan mita tapahtuu seuraavaksi.",
+        "text": "Viestintä oli suoraa ja selkeää. Tiesimme koko ajan, mitä tapahtuu seuraavaksi.",
         "author": "Operatiivinen johtaja",
         "company": "Alueellinen palveluyritys"
       },
@@ -137,7 +150,7 @@
         "source": "Asiakaspalaute",
         "verified": "Vahvistettu asiakas",
         "location": "Tukholma, Ruotsi",
-        "text": "Uusi sivusto vahvisti yrityksen uskottavuutta ja lisasi yhteydenottoja.",
+        "text": "Uusi sivusto vahvisti yrityksen uskottavuutta ja lisäsi yhteydenottoja.",
         "author": "Perustaja",
         "company": "Paikallinen rakennusalan yritys"
       },
@@ -148,7 +161,7 @@
         "location": "Berliini, Saksa",
         "text": "Toimitus oli nopea ja hallittu. Prosessi oli meille todella helppo.",
         "author": "Toimitusjohtaja",
-        "company": "Kansainvalinen palveluyritys"
+        "company": "Kansainvälinen palveluyritys"
       }
     ],
     "metrics": [
@@ -168,85 +181,85 @@
   },
   "whyChoose": {
     "title": "Miksi valita Oulify",
-    "subtitle": "Selkeat syyt siihen, miksi yritykset luottavat meihin tulosten toimittajana.",
-    "aria": "Miksi valita meidat",
+    "subtitle": "Selkeät syyt, miksi yritykset luottavat meihin tulosten saavuttamisessa.",
+    "aria": "Miksi valita meidät",
     "cta": {
       "label": "Varaa puhelu",
       "href": "/fi/#contact"
     },
     "items": [
       {
-        "title": "Nopea toimitus (7-14 paivaa)",
-        "description": "Etenemme nopeasti tinkimatta laadusta, jotta paaset tuloksiin aiemmin."
+        "title": "Nopea toimitus (7-14 päivää)",
+        "description": "Etenemme nopeasti tinkimättä laadusta, jotta pääset tuloksiin aiemmin."
       },
       {
-        "title": "Selkea hinnoittelu, ei yllatyksia",
-        "description": "Kiintea laajuus ja lapiakyva hinnoittelu ennen aloitusta. Se mita naket, on se mita maksat."
+        "title": "Selkeä hinnoittelu ilman yllätyksiä",
+        "description": "Kiinteä laajuus ja läpinäkyvä hinnoittelu ennen aloitusta. Se, mitä näet, on se, mitä maksat."
       },
       {
-        "title": "Tyoskentelet suoraan kehittajan kanssa",
-        "description": "Ei valikerroksia. Nopeampi viestinta, parempi ymmarrys ja ripeammat tulokset."
+        "title": "Työskentelet suoraan tekijän kanssa",
+        "description": "Ei välikerroksia. Nopeampi viestintä, parempi ymmärrys ja ripeämmät tulokset."
       },
       {
-        "title": "Rakennettu tuloksia varten, ei vain ulkoasua",
-        "description": "Kaikki mita teemme keskittyy hankkimaan sinulle enemman asiakkaita, ei vain nayttamaan hyvalta."
+        "title": "Rakennettu tuloksia varten",
+        "description": "Kaikki, mitä teemme, tähtää siihen, että saat enemmän asiakkaita, et vain näyttävään ulkoasuun."
       },
       {
-        "title": "Keskittynyt todellisiin liiketoiminnan tarpeisiin",
-        "description": "Rakennamme kaytannollisia ratkaisuja, jotka auttavat oikeasti pienyrityksia ja startup-yrityksia kasvamaan."
+        "title": "Keskittynyt oikeisiin liiketoiminnan tarpeisiin",
+        "description": "Rakennamme käytännöllisiä ratkaisuja, jotka auttavat oikeasti pienyrityksiä ja startup-yrityksiä kasvamaan."
       }
     ]
   },
   "faq": {
     "title": "Usein kysytyt kysymykset",
-    "subtitle": "Selkeat vastaukset aikatauluista, hinnoittelusta, SEO:sta, tuesta ja yhteistyosta.",
+    "subtitle": "Selkeät vastaukset aikatauluista, hinnoittelusta, SEO:sta, tuesta ja yhteistyöstä.",
     "aria": "Usein kysytyt kysymykset",
     "items": [
       {
-        "question": "Mita digitaalisia palveluita tarjoatte?",
-        "answer": "Tarjoamme kokonaisvaltaisia digitaalisia ratkaisuja, kuten verkkosivujen kehitysta, mobiilisovellusten kehitysta, automaatiojarjestelmia, digimarkkinointia ja SaaS-demovideoita yritysten verkkokasvun tueksi."
+        "question": "Mitä digitaalisia palveluja tarjoatte?",
+        "answer": "Tarjoamme kokonaisvaltaisia digitaalisia ratkaisuja, kuten verkkosivujen toteutusta, mobiilisovellusten kehitystä, automaatiojärjestelmiä, digimarkkinointia ja SaaS-demovideoita yritysten verkkokasvun tueksi."
       },
       {
-        "question": "Kuinka kauan verkkosivun tai mobiilisovelluksen toteutus kestaa?",
-        "answer": "Useimmat yrityssivustot ja laskeutumissivut valmistuvat 7-14 paivassa, kun taas mobiilisovellukset ja monimutkaisemmat jarjestelmat voivat vieda pidempaan ominaisuuksista riippuen."
+        "question": "Kuinka kauan verkkosivuston tai mobiilisovelluksen toteutus kestää?",
+        "answer": "Useimmat yrityssivustot ja laskeutumissivut valmistuvat 7-14 päivässä, kun taas mobiilisovellukset ja monimutkaisemmat järjestelmät voivat viedä enemmän aikaa ominaisuuksista riippuen."
       },
       {
-        "question": "Paljonko verkkosivujen kehitys maksaa?",
-        "answer": "Verkkosivujen kehityksen hinta riippuu tarpeistasi. Tarjoamme selkean kiintean hinnoittelun ilman piilokuluja, jotta tiedat tarkalleen mista maksat."
+        "question": "Paljonko verkkosivujen toteutus maksaa?",
+        "answer": "Verkkosivujen hinta riippuu tarpeistasi. Tarjoamme selkeän kiinteän hinnoittelun ilman piilokuluja, jotta tiedät tarkalleen, mistä maksat."
       },
       {
-        "question": "Teetteko SEO-ystavallisia verkkosivuja?",
-        "answer": "Kyla. Kaikki verkkosivumme rakennetaan SEO:n parhaiden kaytantojen mukaan, mukaan lukien nopea lataus, mobiiliystavallisyys ja optimoitu rakenne, jotta sivusto sijoittuisi paremmin Googlessa."
+        "question": "Teettekö SEO-ystävällisiä verkkosivuja?",
+        "answer": "Kyllä. Kaikki verkkosivumme rakennetaan SEO:n parhaiden käytäntöjen mukaisesti, mukaan lukien nopea latausaika, mobiiliystävällisyys ja optimoitu rakenne, jotta sivusto sijoittuu paremmin Googlessa."
       },
       {
-        "question": "Voitteko auttaa yritystani saamaan enemman asiakkaita verkosta?",
-        "answer": "Kyla. Suunnittelemme korkeasti konvertoivia verkkosivuja ja digimarkkinointistrategioita, jotka auttavat houkuttelemaan kayvijoita ja muuttamaan heidat asiakkaiksi."
+        "question": "Voitteko auttaa yritystäni saamaan enemmän asiakkaita verkosta?",
+        "answer": "Kyllä. Suunnittelemme korkean konversion verkkosivuja ja digimarkkinointistrategioita, jotka auttavat houkuttelemaan kävijöitä ja muuttamaan heidät asiakkaiksi."
       },
       {
-        "question": "Tarjoatteko digimarkkinointipalveluita?",
-        "answer": "Kyla. Tarjoamme digimarkkinointipalveluita, kuten SEO:ta, sosiaalisen median mainontaa ja analytiikan asennusta nakyvyyden parantamiseksi ja liikenteen kasvattamiseksi."
+        "question": "Tarjoatteko digimarkkinointipalveluja?",
+        "answer": "Kyllä. Tarjoamme digimarkkinointipalveluja, kuten SEO:ta, sosiaalisen median mainontaa ja analytiikan käyttöönottoa näkyvyyden parantamiseksi ja liikenteen kasvattamiseksi."
       },
       {
-        "question": "Voitteko uudistaa tai parantaa nykyista verkkosivustoani?",
-        "answer": "Kyla. Voimme uudistaa nykyisen verkkosivustosi paremman kayttajakokemuksen, nopeuden, SEO-suorituskyvyn ja konversioasteen saavuttamiseksi."
+        "question": "Voitteko uudistaa tai parantaa nykyistä verkkosivustoani?",
+        "answer": "Kyllä. Voimme uudistaa nykyisen verkkosivustosi paremman käyttökokemuksen, nopeuden, SEO-suorituskyvyn ja konversioasteen saavuttamiseksi."
       },
       {
-        "question": "Tarjoatteko tukea projektin valmistumisen jalkeen?",
-        "answer": "Kyla. Tarjoamme jatkuvaa tukea ja paivityksia, jotta verkkosivustosi tai sovelluksesi toimii hyvin myos julkaisun jalkeen."
+        "question": "Tarjoatteko tukea projektin valmistumisen jälkeen?",
+        "answer": "Kyllä. Tarjoamme jatkuvaa tukea ja päivityksiä, jotta verkkosivustosi tai sovelluksesi toimii hyvin myös julkaisun jälkeen."
       },
       {
-        "question": "Tyoskenteletteko kansainvalisten asiakkaiden kanssa?",
-        "answer": "Kyla. Tyoskentelemme etana asiakkaiden kanssa Suomessa, Euroopassa ja maailmanlaajuisesti."
+        "question": "Työskentelettekö kansainvälisten asiakkaiden kanssa?",
+        "answer": "Kyllä. Työskentelemme etänä asiakkaiden kanssa Suomessa, Euroopassa ja maailmanlaajuisesti."
       },
       {
-        "question": "Miten paasen aloittamaan palvelunne kanssa?",
-        "answer": "Napsauta \"Varaa maksuton konsultaatio\" tai laheta viesti yhteyslomakkeella. Vastaamme yleensa 24 tunnin sisalla."
+        "question": "Miten pääsen aloittamaan kanssanne?",
+        "answer": "Klikkaa \"Aloita projektisi\" tai lähetä viesti yhteyslomakkeen kautta. Vastaamme yleensä 24 tunnin sisällä."
       }
     ]
   },
   "projects": {
-    "title": "Tyomme",
-    "subtitle": "Visuaalisia esimerkkeja liiketoimintavaikutuksella",
+    "title": "Työmme",
+    "subtitle": "Visuaalisia esimerkkejä, joilla on liiketoimintavaikutusta",
     "cta": {
       "label": "Kerro projektistasi",
       "href": "/fi/#contact"
@@ -258,9 +271,9 @@
         "id": "dashboard-analytics",
         "title": "MREngineering",
         "stack": "Rakennusalan yrityssivusto",
-        "description": "Paransi palvelujen selkeytta ja lisasi asiakasyhteydenottoja.",
+        "description": "Paransi palvelujen selkeyttä ja lisäsi asiakasyhteydenottoja.",
         "workImageSrc": "/assets/work1.webp",
-        "thumbnailSrc": "/assets/mreng.png",
+        "thumbnailSrc": "/assets/work1.webp",
         "thumbnailAlt": "MREngineering-verkkosivuston esikatselu",
         "thumbnailPosition": "top center"
       },
@@ -268,106 +281,107 @@
         "id": "ecommerce-platform",
         "title": "TassuKaveri",
         "stack": "Palvelualusta",
-        "description": "Vahvisti kayttajien luottamusta ja lisasi toistuvaa kayttoa.",
+        "description": "Vahvisti käyttäjien luottamusta ja lisäsi toistuvaa käyttöä.",
         "workImageSrc": "/assets/work2.webp",
-        "thumbnailSrc": "/assets/tassu.png",
+        "thumbnailSrc": "/assets/work2.webp",
         "thumbnailAlt": "TassuKaveri-palvelun esikatselu",
         "thumbnailPosition": "top center"
       },
       {
         "id": "kielibuddy",
         "title": "KieliBuddy",
-        "stack": "Digitaalinen yhteisotuote",
-        "description": "Lisasi vuorovaikutusta yksinkertaisemmalla kayttokokemuksella.",
+        "stack": "Digitaalinen yhteisötuote",
+        "description": "Lisäsi vuorovaikutusta yksinkertaisemmalla käyttökokemuksella.",
         "workImageSrc": "/assets/work3.webp",
-        "thumbnailSrc": "/assets/kielibuddy_thumbnail.png",
+        "thumbnailSrc": "/assets/work3.webp",
         "thumbnailAlt": "KieliBuddy-tuotteen esikatselu"
       }
     ]
   },
   "aboutPage": {
     "title": "Tietoa Oulifysta",
-    "intro": "Olemme pieni digitaalinen tiimi, joka keskittyy rakentamaan yksinkertaisia ja tehokkaita ratkaisuja todellisiin liiketoiminnan ongelmiin.",
+    "intro": "Olemme pieni digitaalinen tiimi, joka keskittyy rakentamaan yksinkertaisia ja tehokkaita ratkaisuja todellisiin liiketoiminnan haasteisiin.",
     "whyStarted": {
       "title": "Miksi aloitimme",
       "paragraphs": [
-        "Oulify syntyi yksinkertaisesta ajatuksesta: useimmat yritykset eivat tarvitse monimutkaisia jarjestelmia, vaan ratkaisuja, jotka todella toimivat.",
-        "Naimme liian monta verkkosivua ja sovellusta, jotka nayttivat hyvilta mutta eivat tuoneet todellisia tuloksia. Siksi paatimme keskittya digitaalisiin tuotteisiin, jotka ovat selkeita, kaytannollisia ja tehty oikeaan kayttoon."
+        "Oulify syntyi yksinkertaisesta ajatuksesta: useimmat yritykset eivät tarvitse monimutkaisia järjestelmiä, vaan ratkaisuja, jotka todella toimivat.",
+        "Näimme liian monta verkkosivua ja sovellusta, jotka näyttivät hyviltä mutta eivät tuoneet todellisia tuloksia. Siksi päätimme keskittyä digitaalisiin tuotteisiin, jotka ovat selkeitä, käytännöllisiä ja tehty oikeaan käyttöön."
       ]
     },
     "howWeWork": {
       "title": "Miten toimimme",
       "paragraphs": [
-        "Pidamme asiat yksinkertaisina ja suoraviivaisina.",
-        "Tyoskentelet laheisesti sen henkilon kanssa, joka rakentaa projektiasi. Keskitymme selkeaan viestintaan, nopeaan toteutukseen ja siihen, etta kaikki tuottaa oikeaa arvoa.",
+        "Pidämme asiat yksinkertaisina ja suoraviivaisina.",
+        "Työskentelet läheisesti sen henkilön kanssa, joka rakentaa projektiasi. Keskitymme selkeään viestintään, nopeaan toteutukseen ja siihen, että kaikki tuottaa oikeaa arvoa.",
         "Ei turhaa monimutkaisuutta, vain sujuva ja fokusoitu prosessi alusta loppuun."
       ]
     },
     "whatWeCareAbout": {
-      "title": "Mita arvostamme",
+      "title": "Mitä arvostamme",
       "items": [
-        "Rakennamme ratkaisuja, jotka ovat hyodyllisia todellisissa tilanteissa",
-        "Toimitamme tyot ajallaan",
-        "Pidamme kaiken selkeana ja lapiakyvana",
-        "Varmistamme, etta investointisi tuo todellista arvoa"
+        "Rakennamme ratkaisuja, jotka ovat hyödyllisiä todellisissa tilanteissa",
+        "Toimitamme työt ajallaan",
+        "Pidämme kaiken selkeänä ja läpinäkyvänä",
+        "Varmistamme, että investointisi tuo todellista arvoa"
       ]
     },
     "whatDrivesUs": {
-      "title": "Mika meita ohjaa",
+      "title": "Mikä meitä ohjaa",
       "mission": {
         "label": "Missiomme",
-        "description": "Rakentaa yksinkertaisia ja tehokkaita digitaalisia ratkaisuja, jotka auttavat yrityksia kasvamaan ilman tarpeetonta monimutkaisuutta."
+        "description": "Rakentaa yksinkertaisia ja tehokkaita digitaalisia ratkaisuja, jotka auttavat yrityksiä kasvamaan ilman tarpeetonta monimutkaisuutta."
       },
       "vision": {
         "label": "Visiomme",
-        "description": "Tehda korkealaatuisista digitaalisista tuotteista saavutettavia kaikenkokoisille yrityksille."
+        "description": "Tehdä korkealaatuisista digitaalisista tuotteista saavutettavia kaikenkokoisille yrityksille."
       }
     },
     "whereWeWork": {
-      "title": "Missa toimimme",
+      "title": "Missä toimimme",
       "paragraphs": [
-        "Tyoskentelemme etana asiakkaiden kanssa eri kaupungeissa ja maissa, pitaen viestinnan yksinkertaisena ja tehokkaana."
+        "Työskentelemme etänä asiakkaiden kanssa eri kaupungeissa ja maissa ja pidämme viestinnän selkeänä ja tehokkaana."
       ]
     }
   },
   "careersPage": {
-    "title": "Tyopaikat Oulifylla",
-    "messageBefore": "Jos innostut siita, mita rakennamme, mutta et nae juuri nyt sopivaa roolia, laheta meille viesti osoitteeseen ",
+    "title": "Työpaikat Oulifylla",
+    "messageBefore": "Jos innostut siitä, mitä rakennamme, mutta et näe juuri nyt sopivaa roolia, lähetä meille viesti osoitteeseen ",
     "email": "careers@oulify.com",
-    "messageAfter": ". Kuulemme mielellamme uteliaista rakentajista."
+    "messageAfter": ". Kuulemme mielellämme uteliaista tekijöistä."
   },
   "contactSection": {
-    "title": "Kerro mita haluat rakentaa",
-    "description": "Jaa liiketoimintatavoitteesi, niin vastaamme yleensa 24 tunnin sisalla.",
+    "title": "Kerro, mitä haluat rakentaa",
+    "description": "Jaa liiketoimintatavoitteesi, niin vastaamme yleensä 24 tunnin sisällä.",
     "form": {
       "name": "Nimi",
-      "email": "Sahkoposti",
+      "email": "Sähköposti",
       "business": "Aihe",
       "message": "Viesti",
-      "send": "Laheta tiedustelu"
+      "send": "Lähetä tiedustelu"
     }
   },
   "footer": {
     "name": "Oulify",
-    "role": "Etatyona toimiva digistudio",
+    "role": "",
     "location": "Oulu, Suomi",
-    "serviceArea": "Web- ja digiratkaisut yrityspaattajille",
+    "serviceArea": "Verkko- ja digiratkaisut yrityksille",
     "companyHeading": "Yritys",
     "getStartedHeading": "Aloita",
     "home": "Etusivu",
     "services": "Palvelut",
     "quickLinks": "Pikalinkit",
-    "about": "Tietoa meista",
-    "careers": "Tyopaikat",
-    "projects": "Tyomme",
+    "about": "Tietoa meistä",
+    "careers": "Työpaikat",
+    "projects": "Työmme",
     "howWeWork": "Toimintatapamme",
     "contact": "Yhteys",
-    "contactHeading": "Yritysyhteys",
-    "requestCv": "Pyyda tarjous",
+    "contactHeading": "Yhteystiedot",
+    "requestCv": "Pyydä tarjous",
     "privacyLabel": "Tietosuojaseloste",
-    "termsLabel": "Kayttoehdot",
-    "refundLabel": "Palautuskaytanto",
-    "builtWith": "Rakennettu Next.js:lla",
+    "termsLabel": "Käyttöehdot",
+    "refundLabel": "Palautuskäytäntö",
+    "builtWith": "Rakennettu Next.js:llä",
+    "rightsReserved": "Kaikki oikeudet pidätetään.",
     "facebook": "Facebook",
     "facebookUrl": "https://www.facebook.com/oulify",
     "linkedin": "LinkedIn",

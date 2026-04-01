@@ -4,6 +4,8 @@ import { getLogoSrc } from "@/lib/logo";
 export default function Footer({ locale, footer }) {
   const year = new Date().getFullYear();
   const brandLogoSrc = getLogoSrc("/assets/logo.png");
+  const rightsReserved = footer.rightsReserved || (locale === "fi" ? "Kaikki oikeudet pidätetään." : "All rights reserved.");
+  const socialLabel = locale === "fi" ? "Sosiaalinen media" : "Social media";
   const legalLinks = [
     {
       href: `/${locale}/privacy-policy`,
@@ -35,9 +37,9 @@ export default function Footer({ locale, footer }) {
           </h3>
           {footer.role ? <p>{footer.role}</p> : null}
           {footer.serviceArea ? <p>{footer.serviceArea}</p> : null}
-          <p className="footer-copyright">&copy; {year} {footer.name}. All rights reserved.</p>
+          <p className="footer-copyright">&copy; {year} {footer.name}. {rightsReserved}</p>
           {footer.facebookUrl ? (
-            <div className="footer-socials" aria-label="Social media">
+            <div className="footer-socials" aria-label={socialLabel}>
               <a
                 className="footer-social-link"
                 href={footer.facebookUrl}

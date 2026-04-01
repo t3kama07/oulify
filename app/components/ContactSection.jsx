@@ -8,7 +8,7 @@ export default function ContactSection({ locale, contactSection, footer }) {
         <div className="glass-card contact-card">
           <h2>{contactSection.title}</h2>
           <p>{contactSection.description}</p>
-          <ContactForm formText={contactSection.form} />
+          <ContactForm locale={locale} formText={contactSection.form} />
         </div>
       </div>
       <div className="footer-shell">

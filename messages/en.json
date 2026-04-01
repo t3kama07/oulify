@@ -6,6 +6,8 @@
     "aboutDescription": "Meet Oulify, an Oulu-based digital team building simple, effective websites, apps, and systems for real business growth.",
     "careersTitle": "Careers | Oulify",
     "careersDescription": "Explore careers at Oulify, an Oulu-based digital team building practical websites, apps, and automation for growing businesses.",
+    "servicesTitle": "Services | Oulify",
+    "servicesDescription": "Explore Oulify services for websites, mobile apps, automation, marketing support, and product-focused demo content.",
     "projectsTitle": "Our Work | Oulify",
     "projectsDescription": "Selected website, app, and digital system projects built by Oulify for real business growth.",
     "contactTitle": "Contact Oulify",
@@ -38,12 +40,15 @@
   "services": {
     "title": "Core Services",
     "aria": "Core services",
+    "pageIntro": "Explore Oulify's core service areas and see the kinds of digital solutions we build for growing businesses.",
     "cta": {
       "label": "Discuss your project",
       "href": "/en/#contact"
     },
     "groups": [
       {
+        "id": "websites",
+        "slug": "websites",
         "title": "Websites",
         "description": "High-converting websites designed to turn visitors into customers",
         "items": [
@@ -52,6 +57,8 @@
         ]
       },
       {
+        "id": "mobile-apps",
+        "slug": "mobile-apps",
         "title": "Mobile Apps",
         "description": "Custom mobile apps built for real users and business growth",
         "items": [
@@ -61,6 +68,8 @@
         ]
       },
       {
+        "id": "automation",
+        "slug": "automation",
         "title": "Automation",
         "description": "Smart systems that save time and reduce manual work",
         "items": [
@@ -69,6 +78,8 @@
         ]
       },
       {
+        "id": "growth-marketing",
+        "slug": "growth-marketing",
         "title": "Growth & Marketing",
         "description": "Strategies to attract, engage, and convert your audience",
         "items": [
@@ -78,6 +89,8 @@
         ]
       },
       {
+        "id": "saas-demo-videos",
+        "slug": "saas-demo-videos",
         "title": "SaaS & Demo Videos",
         "description": "Engaging videos that explain your product and drive action",
         "items": [
@@ -260,7 +273,7 @@
         "stack": "Construction business website",
         "description": "Improved service clarity and increased inbound client inquiries.",
         "workImageSrc": "/assets/work1.webp",
-        "thumbnailSrc": "/assets/mreng.png",
+        "thumbnailSrc": "/assets/work1.webp",
         "thumbnailAlt": "MREngineering website preview",
         "thumbnailPosition": "top center"
       },
@@ -270,7 +283,7 @@
         "stack": "Service marketplace platform",
         "description": "Built trust with users and improved repeat engagement.",
         "workImageSrc": "/assets/work2.webp",
-        "thumbnailSrc": "/assets/tassu.png",
+        "thumbnailSrc": "/assets/work2.webp",
         "thumbnailAlt": "TassuKaveri service platform preview",
         "thumbnailPosition": "top center"
       },
@@ -280,7 +293,7 @@
         "stack": "Digital community product",
         "description": "Increased user interaction with a simpler product experience.",
         "workImageSrc": "/assets/work3.webp",
-        "thumbnailSrc": "/assets/kielibuddy_thumbnail.png",
+        "thumbnailSrc": "/assets/work3.webp",
         "thumbnailAlt": "KieliBuddy product preview"
       }
     ]

@@ -520,6 +520,19 @@ a {
   max-width: none;
 }
 
+.service-group-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-group-card-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(133, 145, 204, 0.34);
+  box-shadow: 0 16px 28px rgba(105, 116, 175, 0.12);
+}
+
 .service-group-description {
   margin: 10px 0 0;
 }

@@ -1,80 +1,88 @@
+import { getServiceSitemapEntries } from "@/lib/services";
 import { toAbsoluteUrl } from "@/lib/site";
 
 export default function sitemap() {
   const lastModified = new Date();
-
-  return [
+  const staticPages = [
     {
-      url: toAbsoluteUrl("/en"),
-      lastModified,
+      path: "/en",
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: toAbsoluteUrl("/en/about"),
-      lastModified,
+      path: "/en/about",
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: toAbsoluteUrl("/en/careers"),
-      lastModified,
+      path: "/en/careers",
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: toAbsoluteUrl("/en/privacy-policy"),
-      lastModified,
+      path: "/en/services",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      path: "/en/privacy-policy",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: toAbsoluteUrl("/en/terms-and-conditions"),
-      lastModified,
+      path: "/en/terms-and-conditions",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: toAbsoluteUrl("/en/refund-policy"),
-      lastModified,
+      path: "/en/refund-policy",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: toAbsoluteUrl("/fi"),
-      lastModified,
+      path: "/fi",
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: toAbsoluteUrl("/fi/about"),
-      lastModified,
+      path: "/fi/about",
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: toAbsoluteUrl("/fi/careers"),
-      lastModified,
+      path: "/fi/careers",
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
-      url: toAbsoluteUrl("/fi/privacy-policy"),
-      lastModified,
+      path: "/fi/services",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      path: "/fi/privacy-policy",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: toAbsoluteUrl("/fi/terms-and-conditions"),
-      lastModified,
+      path: "/fi/terms-and-conditions",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: toAbsoluteUrl("/fi/refund-policy"),
-      lastModified,
+      path: "/fi/refund-policy",
       changeFrequency: "yearly",
       priority: 0.3,
     },
+  ];
+
+  return [
+    ...staticPages.map((page) => ({
+      url: toAbsoluteUrl(page.path),
+      lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    })),
+    ...getServiceSitemapEntries(lastModified),
   ];
 }
