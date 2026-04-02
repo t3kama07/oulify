@@ -31,8 +31,8 @@ export default function Footer({ locale, footer }) {
               className="footer-brand-logo"
               src={brandLogoSrc}
               alt={footer.name}
-              width={180}
-              height={42}
+              width={1114}
+              height={326}
             />
           </h3>
           {footer.role ? <p>{footer.role}</p> : null}

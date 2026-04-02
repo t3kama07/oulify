@@ -27,7 +27,7 @@ The website contact form sends mail through SMTP using environment variables.
 Create a `.env.local` file with values like:
 
 ```env
-SMTP_HOST=smtppro.zoho.com
+SMTP_HOST=smtp.zoho.com
 SMTP_PORT=465
 SMTP_SECURE=true
 SMTP_USER=
