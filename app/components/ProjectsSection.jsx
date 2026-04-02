@@ -18,7 +18,7 @@ export default function ProjectsSection({
         <div className="section-header projects-header">
           <div className="section-heading projects-heading">
             <HeadingTag>{title}</HeadingTag>
-            <p className="section-subtitle">{subtitle}</p>
+            {subtitle ? <p className="section-subtitle">{subtitle}</p> : null}
           </div>
         </div>
 
