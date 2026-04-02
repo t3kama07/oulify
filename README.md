@@ -30,10 +30,10 @@ Create a `.env.local` file with values like:
 SMTP_HOST=smtppro.zoho.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=hello@oulify.com
+SMTP_USER=
 SMTP_PASS=your_zoho_app_password
-CONTACT_TO_EMAIL=hello@oulify.com
-CONTACT_FROM_EMAIL=hello@oulify.com
+CONTACT_TO_EMAIL=
+CONTACT_FROM_EMAIL=
 CONTACT_FROM_NAME=Oulify Website
 ```
 
