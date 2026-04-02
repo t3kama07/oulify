@@ -20,6 +20,29 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Contact Form Email
+
+The website contact form sends mail through SMTP using environment variables.
+
+Create a `.env.local` file with values like:
+
+```env
+SMTP_HOST=smtppro.zoho.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=hello@oulify.com
+SMTP_PASS=your_zoho_app_password
+CONTACT_TO_EMAIL=hello@oulify.com
+CONTACT_FROM_EMAIL=hello@oulify.com
+CONTACT_FROM_NAME=Oulify Website
+```
+
+Notes:
+
+- If Zoho MFA is enabled, use an app-specific password for `SMTP_PASS`.
+- Confirm the exact SMTP host and port in your Zoho Mail admin or mailbox settings.
+- `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`, and `CONTACT_FROM_NAME` are optional. If omitted, the app falls back to `SMTP_USER` where possible.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

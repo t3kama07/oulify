@@ -1,46 +1,47 @@
- "use client";
+"use client";
 
-const CONTACT_EMAIL = "hello@oulify.com";
+import { useState } from "react";
 
 function normalizeValue(value) {
   return String(value || "").trim();
 }
 
-function buildMailtoUrl(locale, values) {
-  const subject =
-    values.business ||
-    (locale === "fi" ? "Uusi projektitiedustelu verkkosivustolta" : "New project inquiry from website");
-  const labels =
-    locale === "fi"
-      ? {
-          name: "Nimi",
-          email: "Sähköposti",
-          business: "Aihe",
-          message: "Viesti",
-        }
-      : {
-          name: "Name",
-          email: "Email",
-          business: "Subject",
-          message: "Message",
-        };
-  const body = [
-    `${labels.name}: ${values.name || "-"}`,
-    `${labels.email}: ${values.email || "-"}`,
-    `${labels.business}: ${values.business || "-"}`,
-    "",
-    `${labels.message}:`,
-    values.message || "-",
-  ].join("\n");
-
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
+const FALLBACK_FORM_COPY = {
+  en: {
+    sending: "Sending...",
+    success: "Thanks, your message has been sent. We will get back to you soon.",
+    error: "We could not send your message right now. Please try again or email hello@oulify.com directly.",
+  },
+  fi: {
+    sending: "Lahetetaan...",
+    success: "Kiitos, viestisi on lahetetty. Palaamme asiaan pian.",
+    error: "Viestin lahetys ei onnistunut juuri nyt. Yrita uudelleen tai laheta sahkopostia osoitteeseen hello@oulify.com.",
+  },
+};
 
 export default function ContactForm({ locale, formText }) {
-  function handleSubmit(event) {
+  const activeLocale = locale === "fi" ? "fi" : "en";
+  const copy = {
+    ...FALLBACK_FORM_COPY[activeLocale],
+    ...formText,
+  };
+  const [status, setStatus] = useState("idle");
+  const [feedback, setFeedback] = useState("");
+
+  function clearFeedback() {
+    if (status === "idle" && !feedback) {
+      return;
+    }
+
+    setStatus("idle");
+    setFeedback("");
+  }
+
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const values = {
       name: normalizeValue(formData.get("name")),
       email: normalizeValue(formData.get("email")),
@@ -48,17 +49,47 @@ export default function ContactForm({ locale, formText }) {
       message: normalizeValue(formData.get("message")),
     };
 
-    window.location.assign(buildMailtoUrl(locale, values));
+    setStatus("sending");
+    setFeedback("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...values,
+          locale: activeLocale,
+        }),
+      });
+
+      const payload = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(payload.error || copy.error);
+      }
+
+      form.reset();
+      setStatus("success");
+      setFeedback(copy.success);
+    } catch (error) {
+      setStatus("error");
+      setFeedback(error.message || copy.error);
+    }
   }
 
+  const isSending = status === "sending";
+
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" onSubmit={handleSubmit} onChange={clearFeedback}>
       <input
         type="text"
         name="name"
         placeholder={formText.name}
         aria-label={formText.name}
         autoComplete="name"
+        disabled={isSending}
         required
       />
       <input
@@ -67,6 +98,7 @@ export default function ContactForm({ locale, formText }) {
         placeholder={formText.email}
         aria-label={formText.email}
         autoComplete="email"
+        disabled={isSending}
         required
       />
       <input
@@ -76,17 +108,30 @@ export default function ContactForm({ locale, formText }) {
         placeholder={formText.business}
         aria-label={formText.business}
         autoComplete="organization"
+        disabled={isSending}
       />
       <textarea
         name="message"
         placeholder={formText.message}
         aria-label={formText.message}
         rows="4"
+        disabled={isSending}
         required
       />
-      <button type="submit" className="btn btn-primary">
-        {formText.send}
+      <button type="submit" className="btn btn-primary" disabled={isSending}>
+        {isSending ? copy.sending : formText.send}
       </button>
+      {feedback ? (
+        <p
+          className={`contact-form-status ${
+            status === "error" ? "contact-form-status-error" : "contact-form-status-success"
+          }`}
+          role={status === "error" ? "alert" : "status"}
+          aria-live="polite"
+        >
+          {feedback}
+        </p>
+      ) : null}
     </form>
   );
 }

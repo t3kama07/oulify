@@ -4,7 +4,7 @@ import "../../globals.css";
 import "../../styles.css";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import { isValidLocale, locales } from "@/lib/i18n";
-import { getSiteUrl } from "@/lib/site";
+import { siteIcons, siteMetadataBase } from "@/lib/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: siteMetadataBase,
+  icons: siteIcons,
 };
 
 export function generateStaticParams() {

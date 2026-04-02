@@ -1140,6 +1140,25 @@ a {
   min-width: 200px;
 }
 
+.contact-form button:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.contact-form-status {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+}
+
+.contact-form-status-success {
+  color: #21603a;
+}
+
+.contact-form-status-error {
+  color: #a13333;
+}
+
 .footer-panel {
   margin-top: 22px;
   padding: 46px 48px 26px;
