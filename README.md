@@ -20,7 +20,7 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Contact Form Email e
+## Contact Form Email em
 
 The website contact form sends mail through SMTP using environment variables.
 
