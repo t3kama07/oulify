@@ -1,8 +1,8 @@
 import AboutSection from "@/app/components/AboutSection";
 import ContactSection from "@/app/components/ContactSection";
 import Navbar from "@/app/components/Navbar";
-import { getHeroImageSrc } from "@/lib/hero-image";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
+import { siteShareImage, siteTwitterCard } from "@/lib/metadata";
 import { getLogoSrc } from "@/lib/logo";
 import { getSiteUrl, toAbsoluteUrl } from "@/lib/site";
 import { notFound } from "next/navigation";
@@ -15,7 +15,6 @@ export async function generateMetadata({ params }) {
   }
 
   const dict = getDictionary(locale);
-  const heroImageSrc = getHeroImageSrc(dict.hero.imageSrc || "/assets/heroimage.png");
 
   return {
     title: dict.meta.aboutTitle,
@@ -32,20 +31,13 @@ export async function generateMetadata({ params }) {
       url: `/${locale}/about`,
       title: dict.meta.aboutTitle,
       description: dict.meta.aboutDescription,
-      images: [
-        {
-          url: heroImageSrc,
-          width: 1024,
-          height: 666,
-          alt: dict.hero.imageAlt,
-        },
-      ],
+      images: [siteShareImage],
     },
     twitter: {
-      card: "summary_large_image",
+      card: siteTwitterCard,
       title: dict.meta.aboutTitle,
       description: dict.meta.aboutDescription,
-      images: [heroImageSrc],
+      images: [siteShareImage.url],
     },
   };
 }
