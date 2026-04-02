@@ -33,8 +33,8 @@ SMTP_SECURE=true
 SMTP_USER=
 SMTP_PASS=your_zoho_app_password
 CONTACT_TO_EMAIL=
-CONTACT_FROM_EMAIL=
-CONTACT_FROM_NAME=Oulify Website
+CONTACT_FROM_EMAIL=j
+CONTACT_FROM_NAME=Oulify Website 
 ```
 
 Notes:
