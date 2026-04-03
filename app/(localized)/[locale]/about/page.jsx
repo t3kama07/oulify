@@ -4,7 +4,7 @@ import Navbar from "@/app/components/Navbar";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
 import { siteShareImage, siteTwitterCard } from "@/lib/metadata";
 import { getLogoSrc } from "@/lib/logo";
-import { getSiteUrl, toAbsoluteUrl } from "@/lib/site";
+import { buildProfessionalServiceSchema } from "@/lib/schema";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
@@ -50,31 +50,17 @@ export default async function LocalizedAboutPage({ params }) {
   }
 
   const dict = getDictionary(locale);
-  const siteUrl = getSiteUrl();
   const brandLogoSrc = getLogoSrc("/assets/logo.png");
-  const sameAs = [dict.footer.facebookUrl, dict.footer.linkedinUrl].filter(Boolean);
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Oulify",
-    url: siteUrl,
-    email: "hello@oulify.com",
+  const professionalServiceSchema = buildProfessionalServiceSchema({
+    dict,
     description: dict.meta.aboutDescription,
-    logo: toAbsoluteUrl(brandLogoSrc),
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "hello@oulify.com",
-      contactType: "sales",
-      availableLanguage: ["en", "fi"],
-    },
-    sameAs: sameAs.length ? sameAs : undefined,
-  };
+  });
 
   return (
     <main className="portfolio-page" id="top">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
       />
       <Navbar locale={locale} nav={dict.nav} currentPath="/about" brandLogoSrc={brandLogoSrc} />
       <AboutSection about={dict.aboutPage} />

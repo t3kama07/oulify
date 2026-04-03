@@ -3,6 +3,7 @@ import Navbar from "@/app/components/Navbar";
 import ServicePageSection from "@/app/components/ServicePageSection";
 import { getDictionary, isValidLocale } from "@/lib/i18n";
 import { getLogoSrc } from "@/lib/logo";
+import { buildServiceSchema } from "@/lib/schema";
 import {
   buildServiceMetadata,
   getAllServiceParams,
@@ -50,9 +51,14 @@ export default async function LocalizedServiceDetailPage({ params }) {
 
   const relatedServices = getServices(locale).filter((item) => item.id !== service.id);
   const labels = getServicePageLabels(locale);
+  const serviceSchema = buildServiceSchema({ locale, service });
 
   return (
     <main className="portfolio-page" id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navbar
         locale={locale}
         nav={dict.nav}
