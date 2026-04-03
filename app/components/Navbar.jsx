@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { LOGO_HEIGHT, LOGO_WIDTH } from "@/lib/logo-dimensions";
 
 export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = "/assets/logo.png" }) {
   const [open, setOpen] = useState(false);
@@ -45,8 +46,8 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
             className="nav-brand-logo"
             src={brandLogoSrc}
             alt="Oulify"
-            width={224}
-            height={53}
+            width={LOGO_WIDTH}
+            height={LOGO_HEIGHT}
             priority
           />
         </a>

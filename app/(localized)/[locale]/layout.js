@@ -4,7 +4,7 @@ import "../../globals.css";
 import "../../styles.css";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import { isValidLocale, locales } from "@/lib/i18n";
-import { siteIcons, siteMetadataBase } from "@/lib/metadata";
+import { siteIcons, siteMetadataBase, siteVerification } from "@/lib/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   metadataBase: siteMetadataBase,
   icons: siteIcons,
+  verification: siteVerification,
 };
 
 export function generateStaticParams() {
@@ -34,7 +35,7 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <WhatsAppButton locale={locale} />
       </body>

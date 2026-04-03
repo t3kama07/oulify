@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LOGO_HEIGHT, LOGO_WIDTH } from "@/lib/logo-dimensions";
 import { getLogoSrc } from "@/lib/logo";
 
 export default function Footer({ locale, footer }) {
@@ -31,8 +32,8 @@ export default function Footer({ locale, footer }) {
               className="footer-brand-logo"
               src={brandLogoSrc}
               alt={footer.name}
-              width={1114}
-              height={326}
+              width={LOGO_WIDTH}
+              height={LOGO_HEIGHT}
             />
           </h3>
           {footer.role ? <p>{footer.role}</p> : null}
