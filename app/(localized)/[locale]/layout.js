@@ -22,6 +22,12 @@ export const metadata = {
   verification: siteVerification,
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

@@ -140,7 +140,7 @@
         "rating": 5,
         "source": "Google-arvio",
         "verified": "Vahvistettu asiakas",
-        "location": "Helsinki, Suomi",
+        "location": "Australia",
         "text": "Viestintä oli suoraa ja selkeää. Tiesimme koko ajan, mitä tapahtuu seuraavaksi.",
         "author": "Operatiivinen johtaja",
         "company": "Alueellinen palveluyritys"
@@ -162,6 +162,15 @@
         "text": "Toimitus oli nopea ja hallittu. Prosessi oli meille todella helppo.",
         "author": "Toimitusjohtaja",
         "company": "Kansainvälinen palveluyritys"
+      },
+      {
+        "rating": 5,
+        "source": "Asiakaspalaute",
+        "verified": "Vahvistettu asiakas",
+        "location": "Austin, Texas, Yhdysvallat",
+        "text": "Projekti eteni nopeasti, viestintä pysyi selkeänä ja lopputulos tuntui viimeistellyltä heti alusta asti.",
+        "author": "Markkinointipäällikkö",
+        "company": "Yhdysvaltalainen kotipalveluyritys"
       }
     ],
     "metrics": [
@@ -170,7 +179,7 @@
         "label": "Toimitettua projektia"
       },
       {
-        "value": "3",
+        "value": "4",
         "label": "Palveltua aluetta"
       },
       {

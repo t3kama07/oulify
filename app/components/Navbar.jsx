@@ -92,16 +92,8 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
             <a href={projectsHref} onClick={close}>{nav.projects}</a>
             <a href={careersHref} onClick={close}>{nav.careers}</a>
             <a href={contactHref} onClick={close}>{nav.contact}</a>
+            <a className="mobile-nav-cta" href={contactHref} onClick={close}>{nav.requestCv}</a>
           </nav>
-          <div className="mobile-menu-footer">
-            <div className="lang-switch" role="group" aria-label={nav.languageSwitch}>
-              <a className={`lang-btn${locale === "en" ? " is-active" : ""}`} href={enPath} onClick={close}>EN</a>
-              <a className={`lang-btn${locale === "fi" ? " is-active" : ""}`} href={fiPath} onClick={close}>FI</a>
-            </div>
-            <a className="btn btn-primary" href={contactHref} onClick={close}>
-              {nav.requestCv}
-            </a>
-          </div>
         </div>
       )}
     </header>

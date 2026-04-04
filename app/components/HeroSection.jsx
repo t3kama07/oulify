@@ -39,7 +39,7 @@ export default function HeroSection({ locale, hero, primaryCta, secondaryCta }) 
               alt={heroImageAlt}
               width={heroImageWidth}
               height={heroImageHeight}
-              sizes="(max-width: 720px) 62vw, (max-width: 1024px) 68vw, 620px"
+              sizes="(max-width: 480px) 30vw, (max-width: 720px) 32vw, (max-width: 900px) 30vw, (max-height: 760px) 26vw, 34vw"
               priority
             />
           </div>

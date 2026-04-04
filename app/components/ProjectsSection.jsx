@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
+import useAutoScrollRail from "./useAutoScrollRail";
 
 export default function ProjectsSection({
   projects,
@@ -9,8 +12,16 @@ export default function ProjectsSection({
   showMarquee = true,
   showGrid = false,
 }) {
-  const railItems = [...projects, ...projects];
+  const railItems =
+    projects.length > 1
+      ? [...projects, ...projects, ...projects, ...projects]
+      : projects;
   const HeadingTag = headingLevel;
+  const { containerRef, trackRef, isDragging, railProps } = useAutoScrollRail({
+    itemCount: projects.length,
+    speed: 0.028,
+    enabled: showMarquee,
+  });
 
   return (
     <section className="section tone-plain" id="projects">
@@ -23,13 +34,22 @@ export default function ProjectsSection({
         </div>
 
         {showMarquee ? (
-          <div className="project-marquee" aria-label={`${title} gallery`}>
-            <div className="project-track">
+          <div
+            ref={containerRef}
+            className={`project-marquee${isDragging ? " is-dragging" : ""}`}
+            aria-label={`${title} gallery`}
+            {...railProps}
+          >
+            <div ref={trackRef} className="project-track">
               {railItems.map((project, index) => {
                 const imageSrc = project.workImageSrc || "/assets/heroimage.png";
 
                 return (
-                  <article key={`${project.id}-${index}`} className="project-image-card">
+                  <article
+                    key={`${project.id}-${index}`}
+                    className="project-image-card"
+                    aria-hidden={projects.length > 1 && index >= projects.length ? "true" : undefined}
+                  >
                     <Image
                       className="project-image"
                       src={imageSrc}
@@ -37,6 +57,7 @@ export default function ProjectsSection({
                       width={1200}
                       height={675}
                       sizes="(max-width: 768px) 85vw, 38vw"
+                      draggable={false}
                     />
                   </article>
                 );
