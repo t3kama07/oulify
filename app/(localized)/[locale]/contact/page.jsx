@@ -1,4 +1,4 @@
-import { isValidLocale } from "@/lib/i18n";
+import { getLocalizedPath, isValidLocale } from "@/lib/i18n";
 import { notFound, permanentRedirect } from "next/navigation";
 
 export default async function LocalizedContactPage({ params }) {
@@ -8,5 +8,5 @@ export default async function LocalizedContactPage({ params }) {
     notFound();
   }
 
-  permanentRedirect(`/${locale}/#contact`);
+  permanentRedirect(getLocalizedPath(locale, "/#contact"));
 }

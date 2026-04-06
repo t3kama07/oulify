@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getHeroImageSrc } from "@/lib/hero-image";
+import { getLocalizedPath } from "@/lib/i18n";
 
 export default function HeroSection({ locale, hero, primaryCta, secondaryCta }) {
   const heroImageSrc = getHeroImageSrc(hero.imageSrc || "/assets/heroimage.png");
@@ -24,10 +25,10 @@ export default function HeroSection({ locale, hero, primaryCta, secondaryCta }) 
             {hero.kicker ? <p className="hero-kicker">{hero.kicker}</p> : null}
             <p className="hero-description">{hero.description}</p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href={`/${locale}/#contact`}>
+              <a className="btn btn-primary" href={getLocalizedPath(locale, "/#contact")}>
                 {primaryCta}
               </a>
-              <a className="btn btn-secondary" href={`/${locale}/#projects`}>
+              <a className="btn btn-secondary" href={getLocalizedPath(locale, "/#projects")}>
                 {secondaryCta}
               </a>
             </div>

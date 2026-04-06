@@ -1,4 +1,4 @@
-import { isValidLocale } from "@/lib/i18n";
+import { getLocalizedPath, isValidLocale } from "@/lib/i18n";
 import { notFound, permanentRedirect } from "next/navigation";
 
 export default async function LocalizedProjectsPage({ params }) {
@@ -8,5 +8,5 @@ export default async function LocalizedProjectsPage({ params }) {
     notFound();
   }
 
-  permanentRedirect(`/${locale}/#projects`);
+  permanentRedirect(getLocalizedPath(locale, "/#projects"));
 }

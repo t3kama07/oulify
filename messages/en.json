@@ -43,7 +43,7 @@
     "pageIntro": "Explore Oulify's core service areas and see the kinds of digital solutions we build for growing businesses.",
     "cta": {
       "label": "Discuss your project",
-      "href": "/en/#contact"
+      "href": "/#contact"
     },
     "groups": [
       {
@@ -107,7 +107,7 @@
     "aria": "How we work process",
     "cta": {
       "label": "Start a conversation",
-      "href": "/en/#contact"
+      "href": "/#contact"
     },
     "items": [
       {
@@ -133,7 +133,7 @@
     "subtitle": "Business owners choose us for clarity, speed, and reliability.",
     "cta": {
       "label": "Request a quote",
-      "href": "/en/#contact"
+      "href": "/#contact"
     },
     "quotes": [
       {
@@ -194,7 +194,7 @@
     "aria": "Why choose us",
     "cta": {
       "label": "Book a call",
-      "href": "/en/#contact"
+      "href": "/#contact"
     },
     "items": [
       {
@@ -271,7 +271,7 @@
     "subtitle": "",
     "cta": {
       "label": "Talk about your project",
-      "href": "/en/#contact"
+      "href": "/#contact"
     },
     "liveDemo": "",
     "github": "",

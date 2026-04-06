@@ -1,6 +1,8 @@
 import { defaultLocale } from "@/lib/i18n";
 import { getServices } from "@/lib/services";
-import { permanentRedirect } from "next/navigation";
+import LocalizedServiceDetailPage, {
+  generateMetadata as generateLocalizedServiceMetadata,
+} from "@/app/(localized)/[locale]/services/[slug]/page";
 
 export function generateStaticParams() {
   return getServices(defaultLocale).map((service) => ({
@@ -8,8 +10,26 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function ServiceRedirectPage({ params }) {
+export async function generateMetadata({ params }) {
   const { slug } = await params;
 
-  permanentRedirect(`/${defaultLocale}/services/${slug}`);
+  return generateLocalizedServiceMetadata({
+    params: Promise.resolve({
+      locale: defaultLocale,
+      slug,
+    }),
+  });
+}
+
+export default async function ServicePage({ params }) {
+  const { slug } = await params;
+
+  return (
+    <LocalizedServiceDetailPage
+      params={Promise.resolve({
+        locale: defaultLocale,
+        slug,
+      })}
+    />
+  );
 }

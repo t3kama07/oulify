@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { getLocalizedPath } from "@/lib/i18n";
 import { LOGO_HEIGHT, LOGO_WIDTH } from "@/lib/logo-dimensions";
 
 export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = "/assets/logo.png" }) {
@@ -24,24 +25,24 @@ export default function Navbar({ locale, nav, currentPath = "/", brandLogoSrc = 
           mobileMenu: "Navigation menu",
           mobilePrimary: "Mobile primary",
         };
-  const enPath = `/en${currentPath === "/" ? "" : currentPath}`;
-  const fiPath = `/fi${currentPath === "/" ? "" : currentPath}`;
+  const enPath = getLocalizedPath("en", currentPath);
+  const fiPath = getLocalizedPath("fi", currentPath);
   const isAboutPage = currentPath === "/about";
   const isCareersPage = currentPath === "/careers";
   const isServicesPage = currentPath === "/services" || currentPath.startsWith("/services/");
   const isHomePage = currentPath === "/";
-  const homeHref = `/${locale}/#top`;
-  const servicesHref = `/${locale}/#services`;
-  const aboutHref = `/${locale}/about`;
-  const careersHref = `/${locale}/careers`;
-  const projectsHref = `/${locale}/#projects`;
-  const contactHref = `/${locale}/#contact`;
+  const homeHref = getLocalizedPath(locale, "/#top");
+  const servicesHref = getLocalizedPath(locale, "/#services");
+  const aboutHref = getLocalizedPath(locale, "/about");
+  const careersHref = getLocalizedPath(locale, "/careers");
+  const projectsHref = getLocalizedPath(locale, "/#projects");
+  const contactHref = getLocalizedPath(locale, "/#contact");
   const close = () => setOpen(false);
 
   return (
     <header className="navbar">
       <div className="nav-content">
-        <a className="nav-brand" href={`/${locale}`} onClick={close} aria-label={labels.home}>
+        <a className="nav-brand" href={getLocalizedPath(locale)} onClick={close} aria-label={labels.home}>
           <Image
             className="nav-brand-logo"
             src={brandLogoSrc}

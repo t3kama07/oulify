@@ -7,7 +7,7 @@ import ProjectsSection from "@/app/components/ProjectsSection";
 import ServicesSection from "@/app/components/ServicesSection";
 import TrustSection from "@/app/components/TrustSection";
 import WhyChooseSection from "@/app/components/WhyChooseSection";
-import { getDictionary, isValidLocale } from "@/lib/i18n";
+import { defaultLocale, getDictionary, getLocalizedPath, isValidLocale } from "@/lib/i18n";
 import { siteShareImage, siteTwitterCard } from "@/lib/metadata";
 import { getLogoSrc } from "@/lib/logo";
 import { buildFAQPageSchema, buildProfessionalServiceSchema } from "@/lib/schema";
@@ -21,20 +21,21 @@ export async function generateMetadata({ params }) {
   }
 
   const dict = getDictionary(locale);
+  const canonicalPath = getLocalizedPath(locale);
 
   return {
     title: dict.meta.homeTitle,
     description: dict.meta.homeDescription,
     alternates: {
-      canonical: `/${locale}`,
+      canonical: canonicalPath,
       languages: {
-        en: "/en",
-        fi: "/fi",
-        "x-default": "/en",
+        en: getLocalizedPath("en"),
+        fi: getLocalizedPath("fi"),
+        "x-default": getLocalizedPath(defaultLocale),
       },
     },
     openGraph: {
-      url: `/${locale}`,
+      url: canonicalPath,
       title: dict.meta.homeTitle,
       description: dict.meta.homeDescription,
       images: [siteShareImage],

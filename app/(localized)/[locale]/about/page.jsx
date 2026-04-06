@@ -1,7 +1,7 @@
 import AboutSection from "@/app/components/AboutSection";
 import ContactSection from "@/app/components/ContactSection";
 import Navbar from "@/app/components/Navbar";
-import { getDictionary, isValidLocale } from "@/lib/i18n";
+import { defaultLocale, getDictionary, getLocalizedPath, isValidLocale } from "@/lib/i18n";
 import { siteShareImage, siteTwitterCard } from "@/lib/metadata";
 import { getLogoSrc } from "@/lib/logo";
 import { buildProfessionalServiceSchema } from "@/lib/schema";
@@ -15,20 +15,21 @@ export async function generateMetadata({ params }) {
   }
 
   const dict = getDictionary(locale);
+  const canonicalPath = getLocalizedPath(locale, "/about");
 
   return {
     title: dict.meta.aboutTitle,
     description: dict.meta.aboutDescription,
     alternates: {
-      canonical: `/${locale}/about`,
+      canonical: canonicalPath,
       languages: {
-        en: "/en/about",
-        fi: "/fi/about",
-        "x-default": "/en/about",
+        en: getLocalizedPath("en", "/about"),
+        fi: getLocalizedPath("fi", "/about"),
+        "x-default": getLocalizedPath(defaultLocale, "/about"),
       },
     },
     openGraph: {
-      url: `/${locale}/about`,
+      url: canonicalPath,
       title: dict.meta.aboutTitle,
       description: dict.meta.aboutDescription,
       images: [siteShareImage],

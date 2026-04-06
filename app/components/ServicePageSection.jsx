@@ -1,4 +1,5 @@
 import { getServicePath } from "@/lib/services";
+import { getLocalizedPath } from "@/lib/i18n";
 
 export default function ServicePageSection({ locale, service, labels, relatedServices = [] }) {
   return (
@@ -46,10 +47,10 @@ export default function ServicePageSection({ locale, service, labels, relatedSer
             <h2>{labels.contactHeading}</h2>
             <p>{labels.contactDescription}</p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href={`/${locale}/#contact`}>
+              <a className="btn btn-primary" href={getLocalizedPath(locale, "/#contact")}>
                 {labels.contactLabel}
               </a>
-              <a className="btn btn-secondary" href={`/${locale}/services`}>
+              <a className="btn btn-secondary" href={getLocalizedPath(locale, "/services")}>
                 {labels.backToServicesLabel}
               </a>
             </div>

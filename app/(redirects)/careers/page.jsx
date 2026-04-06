@@ -1,5 +1,14 @@
-import { permanentRedirect } from "next/navigation";
+import LocalizedCareersPage, {
+  generateMetadata as generateLocalizedCareersMetadata,
+} from "@/app/(localized)/[locale]/careers/page";
+import { defaultLocale } from "@/lib/i18n";
+
+export function generateMetadata() {
+  return generateLocalizedCareersMetadata({
+    params: Promise.resolve({ locale: defaultLocale }),
+  });
+}
 
 export default function CareersPage() {
-  permanentRedirect("/en/careers");
+  return <LocalizedCareersPage params={Promise.resolve({ locale: defaultLocale })} />;
 }

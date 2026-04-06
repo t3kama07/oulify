@@ -5,37 +5,37 @@ export default function sitemap() {
   const lastModified = new Date();
   const staticPages = [
     {
-      path: "/en",
+      path: "/",
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      path: "/en/about",
+      path: "/about",
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      path: "/en/careers",
+      path: "/careers",
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      path: "/en/services",
+      path: "/services",
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      path: "/en/privacy-policy",
+      path: "/privacy-policy",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      path: "/en/terms-and-conditions",
+      path: "/terms-and-conditions",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      path: "/en/refund-policy",
+      path: "/refund-policy",
       changeFrequency: "yearly",
       priority: 0.3,
     },

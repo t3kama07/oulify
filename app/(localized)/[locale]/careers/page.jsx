@@ -1,7 +1,7 @@
 import CareersSection from "@/app/components/CareersSection";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
-import { getDictionary, isValidLocale } from "@/lib/i18n";
+import { defaultLocale, getDictionary, getLocalizedPath, isValidLocale } from "@/lib/i18n";
 import { siteShareImage, siteTwitterCard } from "@/lib/metadata";
 import { getLogoSrc } from "@/lib/logo";
 import { buildProfessionalServiceSchema } from "@/lib/schema";
@@ -15,20 +15,21 @@ export async function generateMetadata({ params }) {
   }
 
   const dict = getDictionary(locale);
+  const canonicalPath = getLocalizedPath(locale, "/careers");
 
   return {
     title: dict.meta.careersTitle,
     description: dict.meta.careersDescription,
     alternates: {
-      canonical: `/${locale}/careers`,
+      canonical: canonicalPath,
       languages: {
-        en: "/en/careers",
-        fi: "/fi/careers",
-        "x-default": "/en/careers",
+        en: getLocalizedPath("en", "/careers"),
+        fi: getLocalizedPath("fi", "/careers"),
+        "x-default": getLocalizedPath(defaultLocale, "/careers"),
       },
     },
     openGraph: {
-      url: `/${locale}/careers`,
+      url: canonicalPath,
       title: dict.meta.careersTitle,
       description: dict.meta.careersDescription,
       images: [siteShareImage],

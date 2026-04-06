@@ -1,5 +1,14 @@
-import { permanentRedirect } from "next/navigation";
+import LocalizedTermsAndConditionsPage, {
+  generateMetadata as generateLocalizedTermsMetadata,
+} from "@/app/(localized)/[locale]/terms-and-conditions/page";
+import { defaultLocale } from "@/lib/i18n";
+
+export function generateMetadata() {
+  return generateLocalizedTermsMetadata({
+    params: Promise.resolve({ locale: defaultLocale }),
+  });
+}
 
 export default function TermsAndConditionsPage() {
-  permanentRedirect("/en/terms-and-conditions");
+  return <LocalizedTermsAndConditionsPage params={Promise.resolve({ locale: defaultLocale })} />;
 }

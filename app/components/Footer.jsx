@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getLocalizedPath } from "@/lib/i18n";
 import { LOGO_HEIGHT, LOGO_WIDTH } from "@/lib/logo-dimensions";
 import { getLogoSrc } from "@/lib/logo";
 
@@ -9,15 +10,15 @@ export default function Footer({ locale, footer }) {
   const socialLabel = locale === "fi" ? "Sosiaalinen media" : "Social media";
   const legalLinks = [
     {
-      href: `/${locale}/privacy-policy`,
+      href: getLocalizedPath(locale, "/privacy-policy"),
       label: footer.privacyLabel,
     },
     {
-      href: `/${locale}/terms-and-conditions`,
+      href: getLocalizedPath(locale, "/terms-and-conditions"),
       label: footer.termsLabel,
     },
     {
-      href: `/${locale}/refund-policy`,
+      href: getLocalizedPath(locale, "/refund-policy"),
       label: footer.refundLabel,
     },
   ].filter((link) => link.label);
@@ -59,17 +60,17 @@ export default function Footer({ locale, footer }) {
 
         <div className="footer-col">
           <h4>{footer.companyHeading}</h4>
-          <a href={`/${locale}/about`}>{footer.about}</a>
-          <a href={`/${locale}/careers`}>{footer.careers}</a>
-          <a href={`/${locale}/#projects`}>{footer.projects}</a>
+          <a href={getLocalizedPath(locale, "/about")}>{footer.about}</a>
+          <a href={getLocalizedPath(locale, "/careers")}>{footer.careers}</a>
+          <a href={getLocalizedPath(locale, "/#projects")}>{footer.projects}</a>
         </div>
 
         <div className="footer-col">
           <h4>{footer.getStartedHeading}</h4>
-          <a href={`/${locale}/#top`}>{footer.home}</a>
-          <a href={`/${locale}/#services`}>{footer.services}</a>
-          <a href={`/${locale}/#contact`}>{footer.contact}</a>
-          <a href={`/${locale}/#contact`}>{footer.requestCv}</a>
+          <a href={getLocalizedPath(locale, "/#top")}>{footer.home}</a>
+          <a href={getLocalizedPath(locale, "/#services")}>{footer.services}</a>
+          <a href={getLocalizedPath(locale, "/#contact")}>{footer.contact}</a>
+          <a href={getLocalizedPath(locale, "/#contact")}>{footer.requestCv}</a>
         </div>
 
         <div className="footer-col footer-col-contact">
